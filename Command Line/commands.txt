@@ -1,0 +1,77 @@
+cd							 change directory  eg cd Desktop 
+cd ..   						 take me to the parent directory 
+cd Old Desktop\Programming   				 jump to multiple directory at the same time 
+cd ../..						 take me back two directories 
+cd + tab  						 auto complete for me 
+
+dir 							 list all the contents of a directory
+dir Programming\python Archieve 			 see forward in a directory 
+dir /a							 includes all hidden files
+
+cls 							 clear the screen 
+
+ dir *.jpg						 displays only the jpg files 
+logo.jpg 						 automatically opens the file if it is present in the directoru 
+
+ipconfig /? or without slash	 			tells us what the command does 
+
+rmdir bacon                      			removes the directory / deleltes only if there is nothing inside it 
+mkdir bacon 						 makes the directory 
+
+rmdir /s bacon           			        deletes dir and everything that is inside it 
+cls 
+
+press HOME						takes you to the start of the directory
+press END						takes you to the end of the directory
+press Ctrl + left/right arrow   			moves one word at a time 
+
+cd "C:\Users\Abdul Basit\Desktop\Old Desktop"	        takes the absoulte path
+
+path 							gives the system path 
+
+wmic logicaldisk get name 				gives the name of all the drives in my computer 
+E:							takes you to the drive E
+tree							structure of the directory in the shape of a tree
+
+color 0C						changes the color of the command line  ; first backgroud color ; second foreground color 
+color  							changes it back to the normal 
+color ? 						gives the color details 
+
+attrib /?						shows the file attributes like hidden etc
+attrib +h                                               makes the file hidden 
+attrib +r						makes the file read only
+
+del bacon 						deleltes the files 
+
+echo lalala > bacon.txt					wrote lalala in bacon text file after creating it 
+type bacon.txt						reads the contents of the file
+echo tunafish >>bacon.txt				does not overwrite the file 
+
+dir > porky.txt						creates porky.txt and add the results of the dir command into it
+copy taimour.txt TestFolder				copies taimour.txt into the TestFolder
+copy taimour.txt e:					copies taimour.txt into the E drive
+xcopy apples bacon					its better because it also copies the contents of the direcory 
+xcopy apples bacon /s					also copies the sub directories 
+move apples bacon					simply moves the files 
+rename bacon ham					simply rename 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

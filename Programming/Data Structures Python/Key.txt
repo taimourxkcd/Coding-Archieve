@@ -1,0 +1,5 @@
+TRAVERSALS ARE STORED IN INTRO AND THEY ARE WORKING 
+D_a_p_delete Performs delete at postion and delete with node perfectly OLD append and prepend
+D_a_p_d_length Calculates length iteratively OLD append , prepand, delete 
+
+S_append_prepand_delKeyandPos Contains all the functions enlisted in the name

@@ -1,0 +1,12 @@
+******************************ENCAPOSULATION*********************************
+# it is the bundling of the data 
+# other class can not modify our data in our class 
+# getter and setter functions are used here 
+******************************POLYMORPHISM*********************************
+# ability of object to have many forms 
+
+# virtual function: 
+		please check if i have the implementation of this method in my other classes
+			if yes then execute them 
+				else execute this 
+		eg virtual void work()

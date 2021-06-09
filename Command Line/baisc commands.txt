@@ -1,0 +1,47 @@
+Add a file into your repositery 
+
+git init								: initializes the git 
+git config remote.origin.url						: gets the repositrery that you need 
+git remote -v 								: checks the status of your git repositry 
+git add .								: add all the files that are present inside the directory 
+git commit -m "comment"							: commits those files into the the respo
+git push origin master/git push -f origin master 			: pushes them into the repositry 
+
+git pull								: pulls you out of your old reposi i guess
+git status 								: checks the status of git 
+
+	FREECODECAMP
+cd 																	change directory 
+ls -la																shows all the hidden and every file in your repositry 
+git status  														shows all the files that were created , deleted or mordified 
+git add .															adds all the files 
+git add index.html													sdd the specific file 
+git commit -m "added index.html" -m "some description"				commits first m is for message. second m is for description, code is saved locally
+git push 															pushes your code to live where your repositery is 
+ssh-keygen -t rsa -b 4096 -C "taimour.rkt@gmail.com"            	generates your ssh key, -t specifies type of encryption, -b specifies strength
+																	-c specifies the email
+ls | grep testkey													search for a specified file 
+cat testkey.pub														prints everything that was inside your file  
+git init															initializes the folder in which we are as git repositry 
+git remote add origin https://github.com/taimourz/demo-repo2.git	add the content to the repositry that was created locally in your machine into remote repositry 
+git remote -v 														gives the names of all the remote repositries 
+git push origin master 												locally created repo into remote server
+git push -u origin master 											sets an upstream so you do not have to type origin master the next time 
+git brach 															shows the current branch we are on 
+git checkout -b feature-readme-instructions							creates and switches to a branch named "feature-readme-instructions"
+git checkout master 												switches to the master branch 
+git diff feature-readme-instructions								shows the differences/changes made between both the branches 
+git push --all -u													push all the branches into the remore directory 
+git branch -d random 												deletes the branch named random 
+git merge random 													meges random with the master  
+git pull origin master 												use this if upstream is not set 
+git pull 															pulls out all the changes from your remote repositery into the local repo
+commit -am "merged with master "      								allows to both add and commit at the same time with the message written 
+git reset README.md													unstage the changes that were made 
+git reset HEAD~1													HEAD goes to one command back and ~1 tells it to undo a git command further 
+git log 															gives you the list of all your previous commits 
+git reset f593a5cdc0ee2dd8861e613a392eca53b97464f9					reset all the changes that were made with that hash 
+git reset --hard 3cc13be6734cc7587d8da27cdac072defb2f1a9c    		completely removes all the changes that were made  
+
+
+git remote set-url origin git://new.url.here						use to set remote repositary 

@@ -1,0 +1,2 @@
+contol shift s generate getter and setters
+select + alt = move an entire line up or down quickly
