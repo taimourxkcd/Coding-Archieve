@@ -1,0 +1,6 @@
+	VISUAL STUDIO 
+ctrl + h 		:brings up the find and replace box 
+alt + a  		:it will then replace all the occurances 
+
+	NOTEPAD ++
+cntrl + shift + backspace : Deletes the whole line behind it 
