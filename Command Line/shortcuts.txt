@@ -10,3 +10,11 @@ win + b 		  : allows you to navigate the taskbar using the keyboard
 
 	Crome
 ctrl + q 		  : helps me look up any word defination and stuff 
+	
+	File Explorer shortcuts 
+window + >   		  : takes you to the forward location if visited
+window + <   		  : takes you to the previous location if visited 
+window + ^		  : maximizes your current window
+window + down arrow key   : minimizes your current window   	 
+windows + (+ button)	  : open magnifier and maximizes your screen   
+windows + (- button)	  : minimizes your screen iif magnifier is open
