@@ -4,3 +4,9 @@ alt + a  		:it will then replace all the occurances
 
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
+
+	TASKBAR
+win + b 		  : allows you to navigate the taskbar using the keyboard 
+
+	Crome
+ctrl + q 		  : helps me look up any word defination and stuff 
