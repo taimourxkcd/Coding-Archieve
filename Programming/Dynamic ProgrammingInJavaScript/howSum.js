@@ -16,6 +16,7 @@ const howSum = (targetsum, numbers) => {
 // m = target sum 
 // n = numbers.lenght 
 // 
+// BRUTE FORCE
 // time: O(n^m + m)
 // space O(m)
 
