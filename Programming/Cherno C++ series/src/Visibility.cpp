@@ -13,7 +13,7 @@ public:
 class Player : public Entity {
 public:
 	Player() {
-		X = 2;
+		X = 2;~~
 	}
 };
 
