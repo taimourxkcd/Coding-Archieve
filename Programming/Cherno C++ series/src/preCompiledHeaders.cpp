@@ -1,7 +1,7 @@
 #include<iostream>
-//#include "pch.h"
+#include "pch.h"
 
 int main() {
 	
-//	std::cin.get();
+	std::cin.get();
 }
