@@ -5,7 +5,7 @@ IINSERT ELEEMNT
 PRINT ELEMENTS 
 */
 
-#if 0
+#if 1
 
 
 #include<stdio.h>
