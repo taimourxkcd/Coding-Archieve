@@ -1,0 +1,4 @@
+output directory       $(SolutionDir)bin\$(Platform)\$(Configuration)\
+Intermediate Directory $(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\
+
+ctrl f7   only compiles the file 
