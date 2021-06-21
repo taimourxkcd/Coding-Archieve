@@ -10,7 +10,7 @@ win + b 		  : allows you to navigate the taskbar using the keyboard
 
 	Crome
 ctrl + q 		  : helps me look up any word defination and stuff 
-	
+cntr + e 		  : searchs google in google crome	
 	File Explorer shortcuts 
 window + >   		  : takes you to the forward location if visited
 window + <   		  : takes you to the previous location if visited 
