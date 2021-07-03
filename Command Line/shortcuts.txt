@@ -19,3 +19,4 @@ window + down arrow key   : minimizes your current window
 windows + (+ button)	  : open magnifier and maximizes your screen   
 windows + (- button)	  : minimizes your screen iif magnifier is open
 windows + d 			  : minimizes the window 
+window + e  			  : opens the file explorer
