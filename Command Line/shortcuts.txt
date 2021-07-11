@@ -1,6 +1,13 @@
 	VISUAL STUDIO 
 ctrl + h 		:brings up the find and replace box 
-alt + a  		:it will then replace all the occurances 
+alt + a  		:it will then replace all the occurances
+
+	VISUAL STUDIO CODE 
+ctrl + d 					:selects the word were the cursor is. 
+ctrl + alt + arrow keys		:do things to multiple lines at the same time
+ctrl + shift + arrow keys   :copy the line to down or up 
+
+ 	  
 
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
