@@ -2,7 +2,8 @@
 // C++ program to implement Shortest Remaining Time First
 // Shortest Remaining Time First (SRTF)
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include<climits>
 using namespace std;
 
 struct Process {
@@ -14,9 +15,9 @@ struct Process {
 // Function to find the waiting time for all
 // processes
 void findWaitingTime(Process proc[], int n,
-								int wt[])
+	int wt[])
 {
-	int rt[n];
+	int *rt = new int(n);
 
 	// Copy the burst time into rt[]
 	for (int i = 0; i < n; i++)
@@ -36,7 +37,7 @@ void findWaitingTime(Process proc[], int n,
 		// current time`
 		for (int j = 0; j < n; j++) {
 			if ((proc[j].art <= t) &&
-			(rt[j] < minm) && rt[j] > 0) {
+				(rt[j] < minm) && rt[j] > 0) {
 				minm = rt[j];
 				shortest = j;
 				check = true;
@@ -70,8 +71,8 @@ void findWaitingTime(Process proc[], int n,
 
 			// Calculate waiting time
 			wt[shortest] = finish_time -
-						proc[shortest].bt -
-						proc[shortest].art;
+				proc[shortest].bt -
+				proc[shortest].art;
 
 			if (wt[shortest] < 0)
 				wt[shortest] = 0;
@@ -83,7 +84,7 @@ void findWaitingTime(Process proc[], int n,
 
 // Function to calculate turn around time
 void findTurnAroundTime(Process proc[], int n,
-						int wt[], int tat[])
+	int wt[], int tat[])
 {
 	// calculating turnaround time by adding
 	// bt[i] + wt[i]
@@ -94,8 +95,10 @@ void findTurnAroundTime(Process proc[], int n,
 // Function to calculate average time
 void findavgTime(Process proc[], int n)
 {
-	int wt[n], tat[n], total_wt = 0,
-					total_tat = 0;
+	int total_wt = 0;
+	int total_tat = 0;
+		int* wt = new int(n);
+		int* tat = new int(n);
 
 	// Function to find waiting time of all
 	// processes
@@ -107,25 +110,18 @@ void findavgTime(Process proc[], int n)
 
 	// Display processes along with all
 	// details
-	cout << "Processes "
-		<< " Burst time "
-		<< " Waiting time "
-		<< " Turn around time\n";
+	cout << "Processes "<< "Burst time " << " Waiting time " << " Turn around time\n";
 
 	// Calculate total waiting time and
 	// total turnaround time
 	for (int i = 0; i < n; i++) {
 		total_wt = total_wt + wt[i];
 		total_tat = total_tat + tat[i];
-		cout << " " << proc[i].pid << "\t\t"
-			<< proc[i].bt << "\t\t " << wt[i]
-			<< "\t\t " << tat[i] << endl;
+		cout <<" "<<proc[i].pid<< "\t\t"<< proc[i].bt << "\t\t"<< wt[i]<< "\t\t " << tat[i] << endl;
 	}
 
-	cout << "\nAverage waiting time = "
-		<< (float)total_wt / (float)n;
-	cout << "\nAverage turn around time = "
-		<< (float)total_tat / (float)n;
+	cout << "\nAverage waiting time = "<< (float)total_wt / (float)n;
+	cout << "\nAverage turn around time = "<< (float)total_tat / (float)n;
 }
 
 // Driver code
