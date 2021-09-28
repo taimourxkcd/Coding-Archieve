@@ -1,6 +1,7 @@
 	VISUAL STUDIO 
-ctrl + h 		:brings up the find and replace box 
-alt + a  		:it will then replace all the occurances
+ctrl + h 						:brings up the find and replace box 
+alt + a  						:it will then replace all the occurances
+alt + shift + cursor keys		:select  multiple lines and do stuff  
 
 	VISUAL STUDIO CODE 
 ctrl + d 					:selects the word were the cursor is. and when you press it multiple times 
@@ -19,6 +20,7 @@ cntrl + s					:open shortcuts
 ctrl + shift + enter		:makes an empty line where your cursor is and the current line is moved below
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
+shift + tab 			  : Shifts/indents the line backwards. WOW
 
 	TASKBAR
 win + b 		  : allows you to navigate the taskbar using the keyboard 
