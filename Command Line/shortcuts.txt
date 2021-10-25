@@ -18,6 +18,9 @@ alt + up/down				:move the current line up or down
 ctrl + / 					:make comments
 cntrl + s					:open shortcuts
 ctrl + shift + enter		:makes an empty line where your cursor is and the current line is moved below
+ctrl + space 				:give suggestions
+ctrl + shift + c 			:opens a cmd for the folder in which file you are
+
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
 shift + tab 			  : Shifts/indents the line backwards. WOW
@@ -39,3 +42,6 @@ windows + (+ button)	  : open magnifier and maximizes your screen
 windows + (- button)	  : minimizes your screen iif magnifier is open
 windows + d 			  : minimizes the window 
 window + e  			  : opens the file explorer
+
+	word
+window + h 		:dictate to write or Speech to text
