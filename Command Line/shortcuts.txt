@@ -20,6 +20,7 @@ cntrl + s					:open shortcuts
 ctrl + shift + enter		:makes an empty line where your cursor is and the current line is moved below
 ctrl + space 				:give suggestions
 ctrl + shift + c 			:opens a cmd for the folder in which file you are
+ctrl + j					:toggle terminal and codeing window
 
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
