@@ -26,3 +26,4 @@ print(a)    # gives wrong output b/c we said that b is pointing to the same outp
 b = a.copy()
 b[0] = 100 
 print(a)    
+

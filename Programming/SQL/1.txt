@@ -1,0 +1,248 @@
+-------------------------
+HOW TO CREATE A TABLE
+-------------------------
+
+CREATE TABLE Employees
+(
+empID number(10),
+empname varchar2(20), 
+empdob date, 
+empsalary number(10), 
+empplac varchar2(20) 
+);
+
+DESC employees
+
+select * from user_tables 
+select * from employees
+DROP TABLE employees
+
+---------------------
+HOW TO INSERT IN A TABLE IN DIFFERENT WAYS 
+---------------------
+
+INSERT INTO EMPLOYEES VALUES(100,'Eric','01-AUG-95',5000,'ERN');
+INSERT INTO EMPLOYEES VALUES(101, 'David', NULL, 7000,NULL)
+INSERT INTO EMPLOYEES(Empid, Empname, Empsalary) VALUES(102, 'ALBERT', 6000)
+
+INSERT INTO EMPOLYEES(Empid,empname,empsalary) VALUES(&Empid,&EmpName,&DOB,&EmpSalary,&Place); // used with server. didnt worked for me lol
+
+---------------------
+HOW TO ALTER IN A TABLE IN DIFFERENT WAYS 
+---------------------
+ 
+ALTER TABLE EMPLOYEES
+RENAME COLUMN empdob TO Edateofbirth
+
+ALTER TABLE EMPLOYEES
+MODIFY (EMPID NUMBER(15)) // precision is changed
+
+ALTER TABLE EMPLOYEES
+MODIFY (EMPID VARCHAR2(20)) // changes the length of varchar2
+
+---------------------
+HOW TO ADD OR DROP A COLUMN USING THE TABLE STATEMENT  
+---------------------
+
+ALTER TABLE EMPLOYEE
+ADD (EmpPF number(10));
+
+
+
+---------------------
+UPDATE STATEMENT   
+---------------------
+ 
+UPDATE EMPLOYEES
+SET emppf=empsalary*2/100; // updates all of the rows of emppf with 100 (mine however takes random values for some reason )
+
+UPDATE EMPLOYEES
+SET emppf=empsalary*2/100 // updates the specific row i.e emppf with id 200 is cahnged
+WHERE EMPID=200; 
+
+UPDATE EMPLOYEES
+SET emppf=empsalary*2/100,empdob='01-JAN-2001' // updates a specific row and changes values of two different columns 
+WHERE EMPID=400; 
+
+
+
+---------------------
+COPY THE STRUCTURE OF AN EXISTING TABLE TO A NEW TABLE    
+---------------------
+
+CREATE TABLE EMPLOYEES1
+AS                          // table is created with records
+SELECT * FROM EMPLOYEES
+
+CREATE TABLE EMPLOYEES2
+AS                          // table is created without records 
+SELECT * FROM EMPLOYEES
+WHERE 1=2
+
+
+---------------------
+DELETE AND TRUNCATE COMMANDS    
+---------------------
+
+DELETE FROM EMPLOYEES
+WHERE EMPID=4;
+
+
+DELETE FROM EMPLOYEES  // all of the rows are deleted 
+
+ROLLBACK // should undo the changes but mine is not working 
+
+TRUNCATE TABLE EMPLOYEES // once you truncate you can not rollback
+
+
+---------------------
+ADD COMMENT ON A TABLE AND COLUMN    
+---------------------
+
+COMMENT ON TABLE EMPLOYEES
+IS ''
+
+----------------
+-----------------
+question no 1
+a) Find total earning of PVFC business to date
+
+
+SELECT SUM(ORDERED_QUANTITY*STANDARD_PRICE) AS TOTAL_EARNING FROM ORDER_LINE_T
+JOIN PRODUCT_T
+ON PRODUCT_T.PRODUCT_ID=ORDER_LINE_T.PRODUCT_ID
+
+question no 2
+b) Find state in which customers have ordered greatest number of product units 
+
+CREATE VIEW ORD AS
+SELECT CUSTOMER_STATE,SUM(ORDERED_QUANTITY) AS SUM
+FROM CUSTOMER_T,ORDER_t,Order_line_T,PRODUCT_t
+Where 
+CUSTOMER_T.CUSTOMER_ID=ORDER_t.CUSTOMER_ID
+AND
+ORDER_t.ORDER_ID=Order_line_T.ORDER_ID
+AND
+Order_line_T.PRODUCT_ID=PRODUCT_t.PRODUCT_ID
+GROUP BY CUSTOMER_STATE
+
+SELECT CUSTOMER_STATE,SUM FROM ORD
+WHERE SUM IN 
+(SELECT MAX(SUM) FROM ORD)
+
+question 3
+c) Find price of product which is never ordered 
+
+CREATE VIEW ORDERED AS
+SELECT PRODUCT_T.PRODUCT_ID,Order_line_T.ORDERED_QUANTITY
+FROM CUSTOMER_T,ORDER_t,Order_line_T,PRODUCT_t
+Where 
+CUSTOMER_T.CUSTOMER_ID=ORDER_t.CUSTOMER_ID
+AND
+ORDER_t.ORDER_ID=Order_line_T.ORDER_ID
+Order_line_T.PRODUCT_ID=PRODUCT_t.PRODUCT_ID
+AND
+
+SELECT PRODUCT_ID FROM ORDERED
+WHERE ORDERED_QUANTITY IS NULL
+
+
+question 4
+d) what is finishing of product which is ordered by majority of customers 
+
+
+SELECT PRODUCT_FINISH,TOTAL FROM
+(
+ SELECT PRODUCT_FINISH, SUM(ORDERED_QUANTITY) AS TOTAL
+ FROM PRODUCT_T JOIN ORDER_LINE_T ON PRODUCT_T.PRODUCT_ID=ORDER_LINE_T.PRODUCT_ID    
+ GROUP BY PRODUCT_FINISH 
+ ORDER BY TOTAL DESC
+) 
+WHERE ROWNUM=1
+
+
+
+
+question 5
+e) prepare a list of cost of all orders of cost/
+
+ SELECT ORDER_ID,TOTAL FROM
+(
+  SELECT ORDER_ID, SUM(STANDARD_PRICE*ORDERED_QUANTITY) AS TOTAL
+  FROM PRODUCT_T
+  JOIN ORDER_LINE_T ON PRODUCT_T.PRODUCT_ID=ORDER_LINE_T.PRODUCT_ID
+  GROUP BY ORDER_ID 
+  ORDER BY TOTAL DESC
+)
+
+
+PRACTICE 
+
+select customer_name from customer_T
+---
+select customer_name from customer_T
+where 
+CUSTOMER_name = 'Impressions'
+---
+select customer_name from customer_T
+where 
+CUSTOMER_name='Impressions'
+AND
+CUSTOMER_CITY='Sacramento'
+---
+select customer_name from customer_T
+where 
+CUSTOMER_name='Impressions'
+OR
+CUSTOMER_CITY='Sacramento'
+---
+select 
+  customer_name 
+from 
+  customer_T
+ORDER BY
+CUSTOMER_name 
+DESC
+---
+select 
+count(*)
+from 
+  customer_t
+---
+SELECT customer_STATE, COUNT(customer_STATE) 
+FROM CUSTOMER_t
+GROUP BY customer_STATE
+HAVING COUNT(customer_STATE) > 1;
+---
+create index new 
+on customer_t(customer_name)
+---
+select sum(standard_price*ordered_quantity)
+from product_t 
+join 
+order_line_t 
+ON 
+product_t.product_id=order_line_t.product_id
+---
+create view test 
+as 
+select customer_name, customer_city
+from customer_t 
+where customer_city='Seattle'
+
+select * from test
+---
+QUESTION 5 DONE BY ME 
+select order_id , total
+from 
+(
+select order_id, sum(standard_price*ordered_quantity)as total
+from order_line_t, product_t 
+where 
+order_line_t.product_id=product_t.product_id
+group by order_id
+) 
+
+
+
+

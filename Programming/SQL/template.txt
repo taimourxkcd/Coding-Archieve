@@ -1,0 +1,48 @@
+DROP TABLE EMPLOYEES
+
+
+CREATE TABLE Employees
+(
+empID number(10),
+empname varchar2(20), 
+empdob date, 
+empsalary number(10), 
+empplac varchar2(20) 
+);
+
+
+INSERT INTO EMPLOYEES VALUES(1, 'Elizebeth','01-JAN-92',5000,'ERN');
+INSERT INTO EMPLOYEES VALUES(2, 'Jennifer','11-JUN-11',2300,'CAN');
+INSERT INTO EMPLOYEES VALUES(3, 'TAYLOR','23-SEP-01',6300,'CLT');
+INSERT INTO EMPLOYEES VALUES(4, 'JUSTICE','17-AUG-07',1000,'TVC');
+
+SELECT * FROM EMPLOYEES
+
+DESC employees2
+
+select * from product_t
+select * from order_t
+select * from order_line_t
+select * from customer_t
+
+------------------
+CREATE TABLE test
+(
+ID varchar2(10),
+name varchar2(20), 
+salary number(10)
+);
+
+insert into test(ID, name, salary) values('1','taimour',25000)
+insert into test(ID, name, salary) values('2','shahab',65000)
+insert into test(ID, name, salary) values('3','waleed',85000)
+
+select * from test
+
+
+create table test2(id varchar2(100),
+new_salary int, message varchar2(100));
+
+desc test2
+select * from test2
+

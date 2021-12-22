@@ -29,7 +29,7 @@ shift + tab 			  : Shifts/indents the line backwards. WOW
 	TASKBAR
 win + b 		  : allows you to navigate the taskbar using the keyboard 
 
-	Crome
+	Chrome
 ctrl + q 		  : helps me look up any word defination and stuff 
 cntr + e 		  : searchs google in google crome
 ctrl + shift + t  : bring back the closed tab
@@ -43,6 +43,8 @@ windows + (+ button)	  : open magnifier and maximizes your screen
 windows + (- button)	  : minimizes your screen iif magnifier is open
 windows + d 			  : minimizes the window 
 window + e  			  : opens the file explorer
+window + i 				  : opens up the settings 	
+
 
 	word
 window + h 		:dictate to write or Speech to text
