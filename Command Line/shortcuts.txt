@@ -44,7 +44,9 @@ windows + (- button)	  : minimizes your screen iif magnifier is open
 windows + d 			  : minimizes the window 
 window + e  			  : opens the file explorer
 window + i 				  : opens up the settings 	
-
+window + shift + up/down  : moves the scroll bar up or down 
+tab						  : moves to select the next option
+shift + tab				  : moves backward to select the option		
 
 	word
 window + h 		:dictate to write or Speech to text
