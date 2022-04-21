@@ -21,7 +21,7 @@ ctrl + shift + enter		:makes an empty line where your cursor is and the current 
 ctrl + space 				:give suggestions
 ctrl + shift + c 			:opens a cmd for the folder in which file you are
 ctrl + j					:toggle terminal and codeing window
-
+cntrl + p + > 				:splits the window to the right
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
 shift + tab 			  : Shifts/indents the line backwards. WOW
@@ -38,7 +38,9 @@ ctrl + shift + t  : bring back the closed tab
 window + >   		  : takes you to the forward location if visited
 window + <   		  : takes you to the previous location if visited 
 window + ^		  : maximizes your current window
-window + down arrow key   : minimizes your current window   	 
+window + down arrow key   : minimizes your current window   
+shift + f10				  : right click functionality	 
+
 windows + (+ button)	  : open magnifier and maximizes your screen   
 windows + (- button)	  : minimizes your screen iif magnifier is open
 windows + d 			  : minimizes the window 
