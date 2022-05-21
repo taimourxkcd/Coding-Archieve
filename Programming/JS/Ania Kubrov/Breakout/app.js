@@ -10,7 +10,6 @@ let yDirection = 2;
 
 const userStart = [230, 10];
 let currentPosition = userStart;
-
 const ballStart = [270, 40];
 let ballCurrentPosition = ballStart;
 

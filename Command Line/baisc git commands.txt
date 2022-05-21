@@ -2,6 +2,7 @@ Add a file into your repositery
 
 git init								: initializes the git 
 git config remote.origin.url						: gets the repositrery that you need 
+git remote add origin (url)					: sets up the remote repositrpush y
 git remote -v 								: checks the status of your git repositry 
 git add .								: add all the files that are present inside the directory 
 git commit -m "comment"							: commits those files into the the respo
