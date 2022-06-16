@@ -22,6 +22,10 @@ ctrl + space 				:give suggestions
 ctrl + shift + c 			:opens a cmd for the folder in which file you are
 ctrl + j					:toggle terminal and codeing window
 cntrl + p + > 				:splits the window to the right
+cntrl + g  					:jump to anyline you want
+shift + d   				:duplicates the line (i have added this myself)
+cntrl + shift + L 			:selects a single word all over your document
+
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
 shift + tab 			  : Shifts/indents the line backwards. WOW
@@ -33,6 +37,7 @@ win + b 		  : allows you to navigate the taskbar using the keyboard
 ctrl + q 		  : helps me look up any word defination and stuff 
 cntr + e 		  : searchs google in google crome
 ctrl + shift + t  : bring back the closed tab
+ctrl + pageup/down: move to next or previous tab
 
 	File Explorer shortcuts 
 window + >   		  : takes you to the forward location if visited
