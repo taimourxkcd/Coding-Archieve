@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 
-void sumOfElements(int* A, int size) {  int* A or int A[] ..... its the same
+void sumOfElements(int* A, int size) { // int* A or int A[] ..... its the same
 
 	int sum=0;
 
 	for (int i = 0; i < size; i++) {
-		sum += A[i];   sum += *(A + i); this is also true 
+		sum += A[i];   // sum += *(A + i); this is also true 
 	}
 	printf("%d",sum);
 }
