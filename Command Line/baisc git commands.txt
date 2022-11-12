@@ -46,3 +46,8 @@ git reset --hard 3cc13be6734cc7587d8da27cdac072defb2f1a9c    		completely remove
 
 
 git remote set-url origin git://new.url.here						use to set remote repositary 
+
+
+XOXO
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"

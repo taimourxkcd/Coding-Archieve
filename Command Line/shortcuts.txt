@@ -57,3 +57,6 @@ shift + tab				  : moves backward to select the option
 
 	word
 window + h 		:dictate to write or Speech to text
+
+	SUBLIME
+ctrl + alt 		:edit multiple lines as once

@@ -1,0 +1,47 @@
+
+deploy on staging
+	BRANCH=csv-not-downloading-content-issue bundle exec cap staging deploy
+
+Bin/rails s
+
+IS_BUSINESS_SITE=1 bin/rails s 
+
+Yarn
+Bin/webpacker —watch —progress
+Yarn build css —watch
+Yarn build —watch
+
+
+Bin/rails db:migrate
+
+Bundle exec sidekiq
+
+
+syedmuhammad.irtesam@arkhitech.com
+123456
+
+bin/webpacker --watch
+yarn build --watch
+
+Close already running server
+	sudo kill -9 $(lsof -i :3000 -t)
+
+
+bundle install // after adding the correct gems in production
+bundle install --without production 
+bundle update 
+git add -A
+git commit -m "deploy"
+ bundle lock --add-platform ruby 
+bundle lock --add-platform x86_64-linux
+git push heroku master
+heroku open
+
+
+heroku run rails db:migrate
+
+bundle; git add -f Gemfile.lock; git commit -am "add gemfile.lock"; git push heroku master
+
+rails about
+
+
