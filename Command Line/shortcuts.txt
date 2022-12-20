@@ -25,7 +25,8 @@ cntrl + p + > 				:splits the window to the right
 cntrl + g  					:jump to anyline you want
 shift + d   				:duplicates the line (i have added this myself)
 cntrl + shift + L 			:selects a single word all over your document
-
+alt + shift + down key      :duplicate line below
+ 
 	NOTEPAD ++
 cntrl + shift + backspace : Deletes the whole line behind it 
 shift + tab 			  : Shifts/indents the line backwards. WOW
@@ -63,3 +64,7 @@ ctrl + alt 		:edit multiple lines as once
 
 	WINDOWS TERMINAL 
 alt + shift + = :splits your terminal into two in a horizontal way
+alt + shift + - :splits your terminal into two in a vertically way
+ctrl + shift + w :closes the current open windows pane
+
+

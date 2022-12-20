@@ -1,0 +1,33 @@
+less hello.cpp			:Prints a couple of lines from a big file 
+
+grep Hello hello.cpp    :Finds the word Hello in the file hello.cpp. Case Sensitive!
+
+grep hello hello.cpp	:Finds the word Hello. doesnt care if its uppercase or lowercase
+
+wc hello.cpp 			:Counts the number of words for you in a file
+
+cat ./hello				:Prints the output of a hidden file
+
+cat ./-					:Prints the output of any file that starts with "-"
+
+file ./inhere/*			:tells the name of all of the files that are present in the inhere folder with there type
+
+which brew				:gives you the path where brew is stored in your computer
+
+tail hello.cpp			:gives you the end of the file
+
+
+
+
+
+------------------------------
+
+When you are inside the man page of a command
+
+Enter /rose			:this will search for the keyword rose inside the man page
+		n:			:jumps to the next word
+		N:			:jumps to the previous word
+		G1:			:jumps to the start of the file
+		G:			:jumps to the end of the file
+
+
