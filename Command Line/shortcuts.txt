@@ -60,3 +60,6 @@ window + h 		:dictate to write or Speech to text
 
 	SUBLIME
 ctrl + alt 		:edit multiple lines as once
+
+	WINDOWS TERMINAL 
+alt + shift + = :splits your terminal into two in a horizontal way
