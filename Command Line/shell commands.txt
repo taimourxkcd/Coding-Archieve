@@ -16,6 +16,48 @@ which brew				:gives you the path where brew is stored in your computer
 
 tail hello.cpp			:gives you the end of the file
 
+ps   					:shows you a list of all the processes that are running
+
+top						:shows a list of processes in the sorted order
+
+ping 					:shows if a particular website is running or not
+
+find . -name '*.txt'    :find the name of all the files that end with .txt extension in the currrent directory
+
+open hello.txt			:opens the file in the read only mode but when you press a button it opens it in the nano editor i think. 
+
+cd / OR find ./			:takes you to the home directory OR gives you the list of all the things in the home directory i suppose 
+
+ find / -user bandit7 
+ -group bandit6 -size   :this will find the file that is owned by the user bandit7 and group bandit6 and has size and throw all of the 	33c 2>/dev/null         permission denied messages in the dev/null folder  
+
+
+ cat data.txt | sort   :finds the uniqe line in the group of repeated lines. we piped it through sort because uniq only finds the unique 
+ | uniq -u				that are adjacent.
+
+
+ strings data.txt 	   :this command will search for all the strings in the file data.txt and then select the ones that have '=='in it 	 
+ | grep ==
+ 						
+
+echo | base64 -d 	   :this will decode base64 encoding into plain text
+data.txt 					
+
+base64 data.text	   :this will ecode the data.txt file into base64 encoding
+ 
+
+tr 'A-Za-z' 
+'N-ZA-Mn-za-m'		  :this will translate everything 13 position. ROT13 cipher
+y < data.txt 		
+
+
+
+
+
+
+find . -type f
+-readable ! 
+-executable -size 1033c :finds a file in the directory that is readable and non executable with a size of 1033 bytes
 
 
 
