@@ -51,3 +51,36 @@ git remote set-url origin git://new.url.here						use to set remote repositary
 XOXO
 git config --global user.name "FIRST_NAME LAST_NAME"
 git config --global user.email "MY_NAME@example.com"
+
+
+-------------------------
+git remote remove origin
+
+
+// SET UP GIT ON LINUX
+
+ssh-keygen -t rsa -b 4096 -C "taimour.rkt@gmail.com"
+
+ cat ~/.ssh/id_rsa
+
+SSHAGENT=/usr/bin/ssh-agent
+
+SSHAGENTARGS="-s"                                                               
+if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+    eval `$SSHAGENT $SSHAGENTARGS`
+    trap "kill $SSH_AGENT_PID" 0
+fi
+
+ssh-add ~/.ssh/id_rsa
+
+cat ~/.ssh/id_rsa.pub copy contents from 
+
+ssh-add
+
+
+// FETCH ALL OF THE REMOTE REPO BRANCHES 
+first clone the repo 
+then git branch -r
+then git pull origin develop (if the name of the branch develop )
+once pulled then switch to it like git checkout develop.
+now you have a branch locally

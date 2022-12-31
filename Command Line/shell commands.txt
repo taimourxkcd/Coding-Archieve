@@ -51,6 +51,12 @@ tr 'A-Za-z'
 y < data.txt 		
 
 
+cat data.txt |		 :translate the data inside data.txt that has been encoded using ROT13 algorithm 
+tr “A-Za-z” 
+“N-ZA-Mn-za-m”
+
+
+
 
 
 
@@ -71,5 +77,9 @@ Enter /rose			:this will search for the keyword rose inside the man page
 		N:			:jumps to the previous word
 		G1:			:jumps to the start of the file
 		G:			:jumps to the end of the file
+
+------------------------------------------
+echo "hel">	data.txt    : this operator can be used to write hel in data.txt.
+echo "hel"<< data.txt   : appends hel 
 
 

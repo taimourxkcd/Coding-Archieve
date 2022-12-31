@@ -15,7 +15,39 @@
     https://docs.brew.sh
 
 
+dpkg gets corrupted
+create backup
+sudo cp -r /var/lib/dpkg /var/lib/dpkg.bak
+remove poblematic file 
+sudo rm /var/lib/dpkg/updates/0052
+sudo dpkg --configure -a
+
 
 
 PATH
 C:\Users\Taimo\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\LocalState\rootfs\home
+
+download java
+curl -L -o java.tar.gz https://download.oracle.com/java/19/latest/jdk-19_linux-x64_bin.tar.gz
+
+
+psql on windows
+
+ dir initdb*
+
+ initdb.exe -U testuser -A password -E utf8 -W -D C:\Users\Taimo\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\LocalState\rootfs\home\taimour\dev\Ecommerce\psqldb
+
+ goto pg_hba.config
+ host    all             all             0.0.0.0/0            password
+ host    all             all             ::/0                 password
+
+do this so you can access server remotely
+
+
+UBUNTU
+
+sudo service postgresql status
+sudo service postgresql start
+
+
+
