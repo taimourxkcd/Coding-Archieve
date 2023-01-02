@@ -55,6 +55,10 @@ cat data.txt |		 :translate the data inside data.txt that has been encoded using
 tr “A-Za-z” 
 “N-ZA-Mn-za-m”
 
+tar xvf file.tar     :used to extract files
+gzip -d data.gz
+bzip2 -d data.bz2
+
 
 
 
