@@ -60,6 +60,13 @@ gzip -d data.gz
 bzip2 -d data.bz2
 
 
+telnet localhost    :once you enter connect to port 30000, you need to provide the correct password
+30000
+
+openssl s_client    :this will connect you to localhost 30001 and then you need to enter the password 
+-connect
+ localhost:30001
+
 
 
 
