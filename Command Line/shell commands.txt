@@ -68,6 +68,9 @@ openssl s_client    :this will connect you to localhost 30001 and then you need 
  localhost:30001
 
 
+ cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet:
+ this will send the passord of the bandit16 
+  
 
 
 

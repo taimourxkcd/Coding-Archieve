@@ -1,0 +1,2 @@
+ps aux | grep rails 	
+ ps -ef | grep postgres 

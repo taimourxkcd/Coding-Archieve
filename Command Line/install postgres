@@ -1,0 +1,25 @@
+postgres
+sudo service postgresql start
+sudo service postgresql stop
+service postgresql status
+data directory: cd /etc/postgresql/14/main/
+sudo su - postgres
+LOGS: cd /var/log/postgresql 
+
+postgres=# SELECT pg_terminate_backend (pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'template0'
+AND pid <> pg_backend_pid();
+ 
+
+Unable to find PostgreSQL client library
+Please install libpq or postgresql client package like so:
+  sudo apt install libpq-dev &&
+  sudo yum install postgresql-devel &&
+  sudo zypper in postgresql-devel &&
+  sudo pacman -S postgresql-libs
+
+start
+ sudo su - postgres
+ psql
+ 

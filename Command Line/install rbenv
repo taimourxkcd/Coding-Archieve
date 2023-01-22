@@ -1,0 +1,59 @@
+sudo apt-get update
+sudo apt-get install -y git curl libssl-dev libreadline-dev zlib1g-dev
+
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+source ~/.zshrc
+
+
+Install the ruby-build plugin
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+rbenv -v
+
+Install the version of Ruby you want:
+rbenv install <version>
+
+Set the version of Ruby you want to use:
+rbenv global <version>
+
+ruby -v
+
+
+rvm install "ruby-3.1.0"
+rvm use 3.1.0
+rvm uninstall <version> 
+
+install gems
+rvm all do gem install <gem_name>
+
+rvm list known
+
+if dependency issue do this:
+ rvm pkg install openssl
+ rvm install 2.7.6 --with-openssl-dir=$HOME/.rvm/usr
+ rvm reinstall all --force
+
+---if not then do this ------
+    rvm pkg install openssl &&
+    rvm remove x.x.x &&
+    rvm install x.x.x -C --with-openssl-dir=$HOME/.rvm/usr
+then install 
+
+---------------
+ERROR
+Your Ruby version is 3.0.2, but your Gemfile specified ~> 2.7.3
+
+JUST GO INSIDE THE GEMFILE AND CHANGE THAT LOL
+rbenv install 2.7.5
+rbenv global 2.7.5
+
+You can also re-add RVM to your profile by running: rvm get stable --auto-dotfiles
+
+rvm current  
+---------------
+
+rvm use 2.6.2 --default

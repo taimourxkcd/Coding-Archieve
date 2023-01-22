@@ -26,7 +26,7 @@ yarn build --watch
 Close already running server
 	sudo kill -9 $(lsof -i :3000 -t)
 
-ps aux | grep rails 	
+
 
 
 bundle install // after adding the correct gems in production
@@ -45,5 +45,4 @@ heroku run rails db:migrate
 bundle; git add -f Gemfile.lock; git commit -am "add gemfile.lock"; git push heroku master
 
 rails about
-
 
