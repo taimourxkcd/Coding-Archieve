@@ -57,3 +57,8 @@ rvm current
 ---------------
 
 rvm use 2.6.2 --default
+
+-------
+accedentely deleted openssl
+
+rvm pkg install openssl

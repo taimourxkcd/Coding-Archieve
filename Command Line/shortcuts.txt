@@ -8,7 +8,8 @@ ctrl + d 					:selects the word were the cursor is. and when you press it multip
 							 then it selects the same word if it is anywhere other in the document
 ctrl + alt + arrow keys		:do things to multiple lines at the same time
 ctrl + shift + arrow keys   :copy the line to down or up 
-alt + press left click		:creates multiple cursors
+alt + press left click AND  :look below
+alt + ctrl + up/down		:creates multiple cursors
 ctrl + l 					:selects the current line
 alt + left/right key		:takes you to the most recent tab that you visited
 ctrl + shift + k 			:deletes the whole line
