@@ -7,3 +7,7 @@ sudo npm install -g n
 
 nvm install node or n latest 
 
+
+------
+yarn exec error
+make sure to install node with the node verison manager

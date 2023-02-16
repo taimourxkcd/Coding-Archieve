@@ -81,6 +81,19 @@ ssh-add
 // FETCH ALL OF THE REMOTE REPO BRANCHES 
 first clone the repo 
 then git branch -r
-then git pull origin develop (if the name of the branch develop )
+then git pull origin develo     p (if the name of the branch develop )
 once pulled then switch to it like git checkout develop.
 now you have a branch locally
+
+-------
+git stash apply stash@{STASH_INDEX}
+git stash list
+git stash pop stash@{STASH_INDEX}
+
+---
+git remote add [remote_name] [remote_repo_url]
+git fetch [remote_name]
+git checkout [branch_name]
+git merge [remote_name]/[branch_name]
+
+git merge --allow-unrelated-histories repo1/master

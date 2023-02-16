@@ -1,0 +1,8 @@
+sudo apt-get remove zsh
+rm ~/.zshrc
+rm -rf ~/.oh-my-zsh
+rm -rf ~/.zsh*
+sudo apt-get install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+

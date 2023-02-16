@@ -62,3 +62,44 @@ rvm use 2.6.2 --default
 accedentely deleted openssl
 
 rvm pkg install openssl
+
+------
+delete and reinstall ruby with rvm
+
+rvm implode
+rm -rf ~/.rvm
+
+rm -rf ~/.gem
+rm -rf ~/.bundle
+
+curl -L https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm install ruby
+
+gem update --system
+
+-----------
+
+IF MAKEFILE ERROR OCCURS
+
+rvm get head
+
+wget https://www.openssl.org/source/openssl-1.1.1g.tar.gz
+tar zxvf openssl-1.1.1g.tar.gz
+
+cd openssl-1.1.1g
+./config --prefix=$HOME/.openssl/openssl-1.1.1g --openssldir=$HOME/.openssl/openssl-1.1.1g
+
+make
+make test
+make install
+
+rm -rf ~/.openssl/openssl-1.1.1g/certs
+ln -s /etc/ssl/certs ~/.openssl/openssl-1.1.1g/certs
+
+
+rvm reinstall ruby-2.6.5 --with-openssl-dir=$HOME/.openssl/openssl-1.1.1g
+
+---------------------------------
+
+sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev

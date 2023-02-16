@@ -23,3 +23,5 @@ start
  sudo su - postgres
  psql
  
+ give all the access rights
+ https://serverfault.com/questions/198002/postgresql-what-does-grant-all-privileges-on-database-do

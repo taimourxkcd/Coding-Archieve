@@ -46,3 +46,4 @@ bundle; git add -f Gemfile.lock; git commit -am "add gemfile.lock"; git push her
 
 rails about
 
+
