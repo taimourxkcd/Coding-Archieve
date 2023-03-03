@@ -97,3 +97,23 @@ git checkout [branch_name]
 git merge [remote_name]/[branch_name]
 
 git merge --allow-unrelated-histories repo1/master
+
+
+----------------------------
+git log --pretty=oneline
+git log --stat
+git log --graph
+git log master...header: it will show you only the commits that are unique to the header and master
+
+-----------------
+git config  --list
+git log deploy-render: shows all of the commits of deploy render branch
+
+-----------------
+deploy the branch
+git push --set-upstream origin master deploy-render #tobe done first time
+
+then 
+git add .
+git commit -m "something"
+git push origin deploy-render
