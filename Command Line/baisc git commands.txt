@@ -117,3 +117,9 @@ then
 git add .
 git commit -m "something"
 git push origin deploy-render
+
+
+-----------------
+git diff --stat af34..ac232 :it shows the difference between two git commits
+git branch -d branch_name
+git push origin --delete branch_name
