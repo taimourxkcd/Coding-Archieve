@@ -1,0 +1,5 @@
+installing gitui
+
+wget https://github.com/extrawurst/gitui/releases/download/v0.23.0/gitui-linux-musl.tar.gz   
+tar -xzvf gitui-linux-musl.tar.gz 
+sudo mv gitui /usr/local/bin/
