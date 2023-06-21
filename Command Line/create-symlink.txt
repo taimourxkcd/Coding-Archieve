@@ -1,0 +1,3 @@
+ln -s /usr/bin/batcat ~/bin/bat
+
+now both batcat and bat work
