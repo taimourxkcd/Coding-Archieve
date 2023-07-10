@@ -22,3 +22,5 @@
 - yarn build --watch
 - yarn build:css --watch
 - bin/webpacker --watch --progressss
+
+- assests precompile:  bundle exec rails assets:precompile > /dev/null
