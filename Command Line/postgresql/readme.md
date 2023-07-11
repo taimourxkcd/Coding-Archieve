@@ -1,0 +1,3 @@
+- pg_ctl -D /usr/local/var/postgres status
+- psql -d kebabify_dev
+- \dt : get the list of all the tables in the db
