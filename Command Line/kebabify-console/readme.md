@@ -12,6 +12,9 @@ Location.find_by_slug("pizzano-i-10-markaz").subscription.invoice
 Location.find_by_slug("pizzano-i-10-markaz").subscription.invoice.update(is_paid: true)
 
 
+// finding the user pin
+User.last.pin
+
 
 ```
 
