@@ -1,3 +1,4 @@
+```
 - Bin/rails s
 
 - IS_BUSINESS_SITE=1 bin/rails s 
@@ -18,7 +19,10 @@
 - Close already running server
 - sudo kill -9 $(lsof -i :3000 -t)
 
+```
+
 ---- 
+```
 - yarn build --watch
 - yarn build:css --watch
 - bin/webpacker --watch --progressss
@@ -26,6 +30,7 @@
 - assests precompile:  bundle exec rails assets:precompile > /dev/null
 
   - if there is a tailwind precompile error:
+```
 
 ```ruby
   //bin/build-scss
@@ -46,6 +51,4 @@
   ```
 
 - Deploy on staging
-  ```
-BRANCH=sales-page-search-filter-fixes bundle exec cap staging deploy
-    ```
+  ```BRANCH=sales-page-search-filter-fixes bundle exec cap staging deploy ```
