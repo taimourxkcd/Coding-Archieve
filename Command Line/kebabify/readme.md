@@ -44,3 +44,8 @@
   --load-path=vendor/assets/stylesheets \
   $@ 
   ```
+
+- Deploy on staging
+  ```
+BRANCH=sales-page-search-filter-fixes bundle exec cap staging deploy
+    ```
