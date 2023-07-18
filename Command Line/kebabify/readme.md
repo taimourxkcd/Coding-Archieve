@@ -52,3 +52,17 @@
 
 - Deploy on staging
   ```BRANCH=sales-page-search-filter-fixes bundle exec cap staging deploy ```
+
+- Retore Dump
+  ```
+  dropdb kebabify_dev  
+  createdb kebabify_dev
+  pg_restore --clean --verbose --no-acl --no-owner -d kebabify_dev foodnerd-backup-20230712.dump
+
+  
+
+
+   ```
+
+ - Ssh into staging
+``` ssh staging.foodnerdpos.com ```
