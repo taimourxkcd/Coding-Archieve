@@ -1,3 +1,4 @@
+```
 pwd gives the path from the root to the current directory 
 ls gives the list of all the files stored in a directory 
 cd changes the directory 
@@ -111,3 +112,5 @@ openssl list -cipher-commands
 
 
 
+
+```

@@ -1,3 +1,4 @@
+```
 less hello.cpp			:Prints a couple of lines from a big file 
 
 grep Hello hello.cpp    :Finds the word Hello in the file hello.cpp. Case Sensitive!
@@ -97,3 +98,5 @@ echo "hel">	data.txt    : this operator can be used to write hel in data.txt.
 echo "hel"<< data.txt   : appends hel 
 
 
+
+```
