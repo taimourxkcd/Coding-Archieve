@@ -89,6 +89,13 @@ new_menu_item = location.stock_items.create!(
     stockable_id: 92447  # Replace with the ID of the associated stockable item if applicable
  )
 
+@order_item_ingredients.each do |order_item_ingredient|
+  ingredient_name = order_item_ingredient.ingredient&.name
+  puts ingredient_name
+end
+
+ OrderItemIngredient.ransack(menu_item_ingredient_ingredient_name_cont: "water").result.last(20).first.menu_item_ingredient.ingredient
+
 
 
 ```
