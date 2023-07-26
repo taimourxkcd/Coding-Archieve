@@ -97,6 +97,11 @@ end
  OrderItemIngredient.ransack(menu_item_ingredient_ingredient_name_cont: "water").result.last(20).first.menu_item_ingredient.ingredient
 
 
+@collection.second.menu_item_ingredient.stock_item.update(unit: "dozen")
+
+
+
+
 
 ```
 
