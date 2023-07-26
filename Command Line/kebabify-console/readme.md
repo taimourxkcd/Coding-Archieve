@@ -3,6 +3,9 @@
   user.password = "123456"
   user.save! validate: false
 
+// open console in staging
+RAILS_ENV=staging bundle exec rails c
+
 // when the invoices is_paid boolean is not working
 
 
