@@ -101,6 +101,10 @@ end
 
 
 @collection.second.menu_item_ingredient.stock_item.update(unit: "dozen")
+// update on staging
+OrderItemIngredient.last.menu_item_ingredient.stock_item.update(unit: "kg")
+OrderItemIngredient.last.menu_item_ingredient.stock_item.update(purchased_quantity: "23", consumed_quantity: 10)
+
 
 
 
