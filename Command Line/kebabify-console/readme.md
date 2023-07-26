@@ -106,9 +106,8 @@ OrderItemIngredient.last.menu_item_ingredient.stock_item.update(unit: "kg")
 OrderItemIngredient.last.menu_item_ingredient.stock_item.update(purchased_quantity: "23", consumed_quantity: 10)
 
 
-
-
-
+ l.order_item_ingredients.first.menu_item_ingredient.stock_item.update(purchased_quantity: "50", consumed_quantity: 25)
+ l.order_item_ingredients.first.menu_item_ingredient.stock_item.update(unit: "dozen")
 
 ```
 
