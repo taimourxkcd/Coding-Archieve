@@ -3,10 +3,6 @@
 
 - IS_BUSINESS_SITE=1 bin/rails s 
  
-- Yarn
-- Bin/webpacker —watch —progress
-- Yarn build css —watch
-- Yarn build —watch
  
  
 - Bin/rails db:migrate
