@@ -109,5 +109,10 @@ OrderItemIngredient.last.menu_item_ingredient.stock_item.update(purchased_quanti
  l.order_item_ingredients.first.menu_item_ingredient.stock_item.update(purchased_quantity: "50", consumed_quantity: 25)
  l.order_item_ingredients.first.menu_item_ingredient.stock_item.update(unit: "dozen")
 
+// update top selling items
+find order o = total_orders[3].id
+find orderItem for that order  oi = OrderItem.where(order_id: 1166772)
+update with the item you want to sell the most ) oi.update(item_id: 92417)
+
 ```
 
