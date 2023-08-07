@@ -114,5 +114,8 @@ find order o = total_orders[3].id
 find orderItem for that order  oi = OrderItem.where(order_id: 1166772)
 update with the item you want to sell the most ) oi.update(item_id: 92417)
 
+
+User.where('email LIKE ?', 'fasih%.com').pluck(:email)
+
 ```
 
