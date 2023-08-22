@@ -117,5 +117,11 @@ update with the item you want to sell the most ) oi.update(item_id: 92417)
 
 User.where('email LIKE ?', 'fasih%.com').pluck(:email)
 
+
+// redis error
+config/application.yml
+REDIS_URL: redis://127.0.0.1/10
+SIDEKIQ_REDIS_URL: redis://127.0.0.1:6379/11
+
 ```
 
