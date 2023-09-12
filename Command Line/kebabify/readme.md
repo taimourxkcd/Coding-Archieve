@@ -61,4 +61,9 @@
    ```
 
  - Ssh into staging
-``` ssh staging.foodnerdpos.com ```
+```
+    ssh staging.foodnerdpos.com
+    console on staging
+    RAILS_ENV=staging bundle exec rails console
+
+```
