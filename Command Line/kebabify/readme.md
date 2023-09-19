@@ -66,4 +66,11 @@
     console on staging
     RAILS_ENV=staging bundle exec rails console
 
+
+// watch logs on staging, same for production
+tail log/staging.log -f
+
+// restart production server
+touch tmp/restart.txt 
+
 ```
