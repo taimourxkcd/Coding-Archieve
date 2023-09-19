@@ -126,8 +126,21 @@ SIDEKIQ_REDIS_URL: redis://127.0.0.1:6379/11
   StockItem.ransack(stockable_type_eq: "ComponentOptionValue").result.count
 
 
-// watch logs on staging
-tail log/staging.log -f
+
+
+3.0.2 :118 > owner = Location.find_by_slug("at-cafe").owner
+3.0.2 :119 > allowed_locations = owner.current_packages.cached_sum_of('User', owner.id, :available_locations)
+ => 1 
+3.0.2 :120 > allowed_locations.positive?
+ => true 
+3.0.2 :121 > locations_count = owner.managed_locations.visible.count
+ => 1 
+3.0.2 :122 > locations_count >= allowed_locations
+ => true 
+3.0.2 :123 > locations_count > allowed_locations
+ => false 
+3.0.2 :124 >  locations_count > allowed_locations
+ => false 
 
 
 ```
