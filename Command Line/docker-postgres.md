@@ -46,12 +46,13 @@ explain select count(*) from grades_parts where g = 30;
 // SHARDING
 docker build -t pgshard . // create an image
 
-docker run --name pgshard1 -p 5432:5432 -d pgshard  // create shards llike this 1, 2, 3
+docker run --name pgshard3 -p 5434:5432 -e POSTGRES_PASSWORD=postgres note // create shards llike this 1, 2, 3
 
 docker run --name pgadmin4 -p 5430:80 \           
            -e "PGADMIN_DEFAULT_EMAIL=admin@example.com" \
            -e "PGADMIN_DEFAULT_PASSWORD=secret" \
            -d dpage/pgadmin4                            // this is pgadmin. use this to manage your shards
+
 
 
 ```
