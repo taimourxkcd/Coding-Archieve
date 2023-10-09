@@ -150,6 +150,12 @@ user = User.find_by(email: "info@atcafe.com.pk")
 package = Package.find_by(title: "Starter")
 subscription = Subscription.create(user: user, package: package, amount: 15000, starts_at: Time.now, expires_at: Time.now + 1.year, obj_id: 3442, obj_type: "Location")
 
+// find out the subscriptions that a particular location has
+ Subscription.joins(:locations_subscriptions).where(locations_subscriptions: { location_id: 3198 })
+
+// find the user that has subscriptions
+ User.joins(:subscriptions).where.not(subscriptions: { id: nil }) .where("email LIKE ?", "%fasih%").pluck(:email)
+
 
 ```
 
