@@ -142,6 +142,14 @@ SIDEKIQ_REDIS_URL: redis://127.0.0.1:6379/11
 3.0.2 :124 >  locations_count > allowed_locations
  => false 
 
+// find the name of all of the packages
+ Subscription.includes(:package).limit(30).distinct.pluck('packages.title')
+
+// create a new subscription
+user = User.find_by(email: "info@atcafe.com.pk")
+package = Package.find_by(title: "Starter")
+subscription = Subscription.create(user: user, package: package, amount: 15000, starts_at: Time.now, expires_at: Time.now + 1.year, obj_id: 3442, obj_type: "Location")
+
 
 ```
 
