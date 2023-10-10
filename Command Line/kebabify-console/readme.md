@@ -156,6 +156,8 @@ subscription = Subscription.create(user: user, package: package, amount: 15000, 
 // find the user that has subscriptions
  User.joins(:subscriptions).where.not(subscriptions: { id: nil }) .where("email LIKE ?", "%fasih%").pluck(:email)
 
+// find order count of menu items starting from OrderItem tabel
+    OrderItem.where(component_option_value_id: component_option_value.id,item_id: id,item_type: 'MenuItem',deleted_at: nil).sum(&:number)
 
 ```
 
