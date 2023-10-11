@@ -146,4 +146,19 @@ git diff --stat af34..ac232 :it shows the difference between two git commits
 git branch -d branch_name
 git push origin --delete branch_name
 
+
+-------------------
+ git stash
+ git checkout master
+ git checkout -b mercury-fixes
+ git stash apply                                    
+
+
+
+
+
+
+
+
+
 ```
