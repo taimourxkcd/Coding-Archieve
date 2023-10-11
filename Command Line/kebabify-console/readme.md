@@ -159,5 +159,9 @@ subscription = Subscription.create(user: user, package: package, amount: 15000, 
 // find order count of menu items starting from OrderItem tabel
     OrderItem.where(component_option_value_id: component_option_value.id,item_id: id,item_type: 'MenuItem',deleted_at: nil).sum(&:number)
 
+// do ransack search
+Order.ransack.location_drawers_id_eq
+
+
 ```
 
