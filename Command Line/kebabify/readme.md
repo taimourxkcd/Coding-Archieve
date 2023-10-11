@@ -71,6 +71,10 @@
 tail log/staging.log -f
 
 // restart production server
-touch tmp/restart.txt 
+touch tmp/restart.txt
+
+// open the nginx
+ngrok http 3000
+
 
 ```
