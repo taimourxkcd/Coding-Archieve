@@ -162,6 +162,8 @@ subscription = Subscription.create(user: user, package: package, amount: 15000, 
 // do ransack search
 Order.ransack.location_drawers_id_eq
 
+//
+ Menu.joins(ingredients: :ingredient_option_values).distinct.first.ingredients.first.ingredient_option_values.first.ingredient.stock_items.first
 
 ```
 
