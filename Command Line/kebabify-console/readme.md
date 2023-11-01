@@ -165,5 +165,11 @@ Order.ransack.location_drawers_id_eq
 //
  Menu.joins(ingredients: :ingredient_option_values).distinct.first.ingredients.first.ingredient_option_values.first.ingredient.stock_items.first
 
+
+// make payment from console
+ User.last.orders.first.update(payment_status: "pay_confirmed")
+ User.last.orders.first.update(state: "completed")
+
+
 ```
 
