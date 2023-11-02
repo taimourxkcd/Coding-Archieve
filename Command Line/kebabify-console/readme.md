@@ -171,5 +171,23 @@ Order.ransack.location_drawers_id_eq
  User.last.orders.first.update(state: "completed")
 
 
+// perform order search from console
+ current_user = User.find_by(email: "muhammad.hamid+11@arkhitech.com")
+location_ids = @location&.id || current_user.managed_locations.ids
+ @order_items = OrderItem.joins(:order).where("#{Order.table_name}.location_id IN (?)", location_ids)
+
+
+q = {}
+
+q['order_completed_at_or_order_received_at_or_order_accepted_at_gteq'] = Time.zone.now.beginning_of_day
+q['order_completed_at_or_order_received_at_or_order_accepted_at_lteq'] = Time.zone.now.end_of_day
+q['order_state_in'] = [Order::STATES_COMPLETED]
+
+results = Order.ransack(:q).result
+
+
+
+
+
 ```
 
