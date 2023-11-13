@@ -186,6 +186,12 @@ q['order_state_in'] = [Order::STATES_COMPLETED]
 results = Order.ransack(:q).result
 
 
+// update the start and end date
+start_at = Date.new(2023,7,20)
+end_at = Date.new(2023,11,23)
+ LocationsSubscription.find_by(id: 2949).subscription.update(starts_at: start_at, expires_at: end_at)
+
+
 
 
 
