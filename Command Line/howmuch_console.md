@@ -15,6 +15,10 @@ store_variant_taxon = StoreVariantTaxon.create(
   category_taxon_id: category_id
 )
 
+// add column from the console
+ ActiveRecord::Base.connection.add_column :spree_stock_movements, :deleted_at, :datetime
+
+
 
 
 ```
