@@ -18,6 +18,10 @@ store_variant_taxon = StoreVariantTaxon.create(
 // add column from the console
  ActiveRecord::Base.connection.add_column :spree_stock_movements, :deleted_at, :datetime
 
+// send email from local
+change sparkpost api key. get it form live
+then in store_mailer.rb       sparkpost_mail(to: "taimoor.afzal@arkhitech.com", subject: subject, sparkpost_data: data)
+then from console LowInventoryNotificationWorker.new.perform(6829511) // id is stock item id
 
 
 
