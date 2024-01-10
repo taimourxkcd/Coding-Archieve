@@ -25,6 +25,8 @@
 
 - assests precompile:  bundle exec rails assets:precompile > /dev/null
 
+bundle exec i18n export
+
   - if there is a tailwind precompile error:
 ```
 
