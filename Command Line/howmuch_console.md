@@ -1,4 +1,5 @@
-```
+```ruby
+
 Spree::StockTransfer.ransack(stock_movements_stock_item_store_variant_name_cont: 'fird')
 
 // revert the deleted orders
@@ -23,6 +24,17 @@ change sparkpost api key. get it form live
 then in store_mailer.rb       sparkpost_mail(to: "taimoor.afzal@arkhitech.com", subject: subject, sparkpost_data: data)
 then from console LowInventoryNotificationWorker.new.perform(6829511) // id is stock item id
 
+
+// remove user_devices and disable them
+user_devices = Spree::Store.find_by(code: "jawhara-tire-shop").user_devices
+
+user_devices.each do |user_device|
+  if user_device.orders_by_token.complete.where(shipment_state: 'shipped').exists?
+    user_device.update(enabled_at: nil)
+  else
+    user_device.destroy
+  end
+end
 
 
 ```
