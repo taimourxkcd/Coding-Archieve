@@ -36,5 +36,10 @@ user_devices.each do |user_device|
   end
 end
 
+// find user_devices that have orders > 0
+store = Spree::Store.find_by(code: "teststaging8")
+user_devices_with_orders = store.user_devices.joins(:orders).group('spree_user_devices.id').having('COUNT(spree_orders.id) > 0')
+
+
 
 ```
