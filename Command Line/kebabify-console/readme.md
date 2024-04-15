@@ -198,6 +198,11 @@ end_at = Date.new(2023,11,23)
 // reset primary key sequences
 ActiveRecord::Base.connection.reset_pk_sequence!('packages')
 
+// change this to sparkpost when sending mail from local in development.rb
+config.action_mailer.delivery_method       = :letter_opener
+to: config.action_mailer.delivery_method       = :sparkpost
+
+
 
 
 
