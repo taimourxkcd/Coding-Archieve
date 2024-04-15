@@ -195,6 +195,10 @@ end_at = Date.new(2023,11,23)
 
  UserMailer.new_stock_location_created("TAIMOUR", "taimoor.afzal@arkhitech.com", "ADFDAS", "ADFDAS", Time.now ).deliver_now
 
+// reset primary key sequences
+ActiveRecord::Base.connection.reset_pk_sequence!('packages')
+
+
 
 
 ```
