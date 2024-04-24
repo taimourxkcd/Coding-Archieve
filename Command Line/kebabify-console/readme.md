@@ -202,7 +202,9 @@ ActiveRecord::Base.connection.reset_pk_sequence!('packages')
 config.action_mailer.delivery_method       = :letter_opener
 to: config.action_mailer.delivery_method       = :sparkpost
 
-
+// after db restore. add a chain/company whatever
+ Location.where('name LIKE ?', "%Foodnerd%").pluck(:name)
+ Location.where('name LIKE ?', "%Foodnerd%").third.chain.update(is_company: true)
 
 
 
