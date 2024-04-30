@@ -207,6 +207,13 @@ to: config.action_mailer.delivery_method       = :sparkpost
  Location.where('name LIKE ?', "%Foodnerd%").third.chain.update(is_company: true)
 
 
+// add delete column from console
+ActiveRecord::Base.connection.add_column :packages, :trial_duration, :integer
+ActiveRecord::Base.connection.add_column :packages, :trial_duration_unit, :string
+
+ActiveRecord::Base.connection.remove_column :packages, :trial_duration
+ActiveRecord::Base.connection.remove_column :packages, :trial_duration_unit
+
 
 ```
 
