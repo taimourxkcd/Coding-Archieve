@@ -153,6 +153,8 @@ git push origin --delete branch_name
  git checkout -b mercury-fixes
  git stash apply                                    
 
+-------------------------
+ git reset --soft HEAD~1
 
 
 
