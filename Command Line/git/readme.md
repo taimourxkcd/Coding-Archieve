@@ -156,6 +156,12 @@ git push origin --delete branch_name
 -------------------------
  git reset --soft HEAD~1
 
+-------------------------
+ssh-add -D : delete all identities currently stored in the authentication agent
+cat ~/.ssh/your_second_private_key.pub
+
+
+
 
 
 
