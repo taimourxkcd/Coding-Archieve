@@ -161,7 +161,8 @@ ssh-add -D : delete all identities currently stored in the authentication agent
 cat ~/.ssh/your_second_private_key.pub
 
 
-
+---------------------
+git submodule update --init   : get submodule updates
 
 
 
