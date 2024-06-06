@@ -215,5 +215,12 @@ ActiveRecord::Base.connection.remove_column :packages, :trial_duration
 ActiveRecord::Base.connection.remove_column :packages, :trial_duration_unit
 
 
+// cancancan
+ current_user.owner_associations.first.role.parent_id
+current_user.owner_associations.first
+ _exception.subject.chain.locations
+ Role.accessible_by(current_ability, :read)
+current_ability.can? _exception.subject, :new
+
 ```
 
