@@ -222,5 +222,13 @@ current_user.owner_associations.first
  Role.accessible_by(current_ability, :read)
 current_ability.can? _exception.subject, :new
 
+
+// generate file export
+location = Location.find_by(slug: "test-loc-07062")
+logger = Rails.logger
+file_export = location.file_exports.build
+file_export.generate_export(logger)
+file_export.save!
+
 ```
 
