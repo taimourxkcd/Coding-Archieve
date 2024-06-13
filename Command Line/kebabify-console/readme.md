@@ -230,5 +230,19 @@ file_export = location.file_exports.build
 file_export.generate_export(logger)
 file_export.save!
 
+// do a transaction with rollback
+ActiveRecord::Base.transaction do
+  association = OwnerAssociation.where.not(role_id: ids).joins(:role).where(role: { name: 'Owner' })
+    original_values << { id: association.id, original_role_id: association.role_id }
+  association.update(role_id: 4)
+end
+def rollback_changes(original_values)
+  ActiveRecord::Base.transaction do
+    original_values.each do |value|
+      OwnerAssociation.find(value[:id]).update!(role_id: value[:original_role_id])
+    end
+  end
+end
+
 ```
 
