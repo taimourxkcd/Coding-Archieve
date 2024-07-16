@@ -244,5 +244,9 @@ def rollback_changes(original_values)
   end
 end
 
+
+// for debugging library
+ begin;  CS.get("PK", "BA"); rescue => e; puts e.backtrace.join("\n"); end
+
 ```
 
