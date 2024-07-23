@@ -248,5 +248,10 @@ end
 // for debugging library
  begin;  CS.get("PK", "BA"); rescue => e; puts e.backtrace.join("\n"); end
 
+
+//
+Subscription.where('created_at > ?', 4.weeks.ago).where(status: 'saved').map(&:save)
+
+
 ```
 
