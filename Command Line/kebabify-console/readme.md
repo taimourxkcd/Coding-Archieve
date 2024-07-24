@@ -253,5 +253,15 @@ end
 Subscription.where('created_at > ?', 4.weeks.ago).where(status: 'saved').map(&:save)
 
 
+
+// logo issue
+ Location.friendly.find('asdasdasd').hosted_data.url_small_logo.recreate_versions!(:cropped_logo)
+begin;Location.friendly.find('asdasdasd').hosted_data.url_small_logo.recreate_versions!('cropped_logo');rescue => e;puts e.backtrace.join("\n");end
+begin;Location.friendly.find('asdasdasd').hosted_data.url_small_logo.recreate_versions!(:cropped_logo);rescue => e;puts e.backtrace.join("\n");end
+Location.friendly.find('asdasdasd').hosted_data.url_small_logo.cropped_logo.methods(true).sort
+Location.friendly.find('asdasdasd').hosted_data.url_small_logo.aws_bucket
+
+
+
 ```
 
