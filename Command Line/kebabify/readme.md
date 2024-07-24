@@ -75,6 +75,10 @@ tail log/staging.log -f
 // restart production server
 touch tmp/restart.txt
 
+// restart sidekiq on staging
+pkill -f sidekiq
+ps -aef |grep sidekiq
+
 // open the nginx
 ngrok http 3000
 
