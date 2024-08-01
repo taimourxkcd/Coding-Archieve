@@ -82,5 +82,8 @@ ps -aef |grep sidekiq
 // open the nginx
 ngrok http 3000
 
+// download from remote
+scp arkhitech@foodnerdpos.com:/usr/share/nginx/foodnerd/current/app/models/stock_item.rb /Users/arkhitech/Desktop/kebabify/
+
 
 ```
