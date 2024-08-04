@@ -28,6 +28,7 @@
 - Ex                    : open ups an explore window
 - Vex                   : opens up a vertical explore window
 - Sex                   : split explore just like the above
+- /                     : does the search. you can use 'n' to jump forward and 'N' to jump backward
 -------------------------------------------------------------------------------------------------------
 - :set scrolloff=8	        	: when you are away 8 lines from the end of the page, it automatically scrolls
 - :set number			        : sets the line numbers into your vim
@@ -39,6 +40,12 @@
 - cntrl + ^                     : moves you to the previous file you were in
 - cntrl + o                     : you have a jumplist, it hops the files/directories that are in that jumplist
 - cntrl + i                     : to go forward in a jumplist 
+- cntrl + d                     : this shows you a popup menu with the recommended commands
+- shift + d                     : deletes everything forward from your cursor in the current line
+- cntrl + p                     : this would go backward in a list ( when doing fuzzy find)
+- cntrl + n                     : this would go forward in a list ( when doing fuzzy find)
+- cntrl + j                     : grep a word. you get a files list, then you can go forward with this from one file to another
+- cntrl + k                     : grep a word. you get a files list, then you can go backward with this from one file to another
 --------------------------------WINDOWS MODE-----------------------------------------------------------
 - s                             : splits the screen horizontally 
 - v                             : splits the screen vertically
@@ -54,10 +61,12 @@
 
 
 
-
-
-
-
+-------------------------------------REGEX---------------------------------------------------------------
+- /err.*                        : selects everything that has err in it .*
+- s/error/taimour               : selects error from and replaces with taimour, you can do this over a highlighted region 
+- %s/foo/taimour                : same as above but it searches in the whole file
+- s/foo/taimour/g               : replaces all the foo in one line with taimour, can do the same in the whole file
+- s/foo/taimour/gc              : replaces all the foo with taimour but also asks you, yes or no. you can press 'y' or 'n'
 
 
 
