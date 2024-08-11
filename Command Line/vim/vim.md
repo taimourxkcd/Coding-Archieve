@@ -33,12 +33,14 @@
 - c%                    : gets rid of the things that are inside the parenthesis
 - I 			        : goes to the first non-whitespace character in the line
 - A 			        : goes to the end of the line always including the trailing whitespace
+- ea                    : moves you to the end of the current work and puts you in insert mode 
 - o 			        : goes to the next line and turns insert mode on. also respects the language indentation
 - O			            : creates a new line above, works same as o
 - 4dd			        : delete the next 4 lines
 - d6j			        : i want to delete the 6 down lines
 - shift + v + 6j	    : select the current line and then move down 6 and delete them
 - dw || de			    : delete the current word
+- caw   			    : delete the current word the cursor is on right now and puts you in the insert mode 
 - bd    			    : delete the previous word
 - 9k			        : jump 9 lines up
 - shift + g OR G	    : you will go to the bottom
