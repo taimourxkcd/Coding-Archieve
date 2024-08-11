@@ -3,18 +3,33 @@
 - l 			        : right
 - h 			        : left
 - w 			        : jump a word
+- u                     : undo a command
+- U                     : undo all the changes done on the current line 
+- $ 			        : takes you to the end of the line 
 - b 			        : jump back a word
+- 0  			        : takes you to the start of the line 
+- gg                    : takes you to the start of the file
+- 500G                  : takes you to line number 500 
+- G                     : takes you to the end of the file
+- ry                    : replaces the character with the next character that is below the cursor
+- ce                    : move the cursor on the character, it will remove all the character in front of it and activates insert mode 
+- cc                    : does the same thing as ce but for the whole line 
+- c$                    : deletes the rest of the line after the cursor and puts you in insert mode
 - x 			        : delete one character in the front
 - zz 			        : center the text
 - dd  			        : delete the line
+- d2d  			        : delete the 2 lines below 
 - shift + v + d 	    : delete the line
 - yyp           	    : copy one line and paste below
+- p or P                : lower case p inserts the line below the current line. Upper case pastes it above the current line
 - yyP           	    : copy one line and paste above 
 - v       		        : begin highlighting
 - V         		    : hightlights the whole line
 - reg			        : keep track of the things you delete and the things that you yank
 - i 		        	: opens the cursor to the left of current character, i means on the inside
 - a      	        	: opens the cursor to the right of current character, a means on the outside
+- %                     : brings you to the end of the closing braces
+- c%                    : gets rid of the things that are inside the parenthesis
 - I 			        : goes to the first non-whitespace character in the line
 - A 			        : goes to the end of the line always including the trailing whitespace
 - o 			        : goes to the next line and turns insert mode on. also respects the language indentation
@@ -22,7 +37,7 @@
 - 4dd			        : delete the next 4 lines
 - d6j			        : i want to delete the 6 down lines
 - shift + v + 6j	    : select the current line and then move down 6 and delete them
-- dw			        : delete the current word
+- dw || de			    : delete the current word
 - 9k			        : jump 9 lines up
 - shift + g OR G	    : you will go to the bottom
 - Ex                    : open ups an explore window
@@ -46,6 +61,9 @@
 - cntrl + n                     : this would go forward in a list ( when doing fuzzy find)
 - cntrl + j                     : grep a word. you get a files list, then you can go forward with this from one file to another
 - cntrl + k                     : grep a word. you get a files list, then you can go backward with this from one file to another
+- cntrl + w                     : when in insert mode, deletes the prvious word
+- cntrl + u                     : when in insert mode, deletes the whole line before the cursor 
+- cntrl + G                     : tells you the info about the current file 
 --------------------------------WINDOWS MODE-----------------------------------------------------------
 - s                             : splits the screen horizontally 
 - v                             : splits the screen vertically
