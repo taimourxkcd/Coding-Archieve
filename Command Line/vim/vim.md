@@ -4,6 +4,7 @@
 - h 			        : left
 - w 			        : jump a word
 - u                     : undo a command
+- ctrl + r              : redo a command
 - U                     : undo all the changes done on the current line 
 - $ 			        : takes you to the end of the line 
 - b 			        : jump back a word
@@ -38,12 +39,14 @@
 - d6j			        : i want to delete the 6 down lines
 - shift + v + 6j	    : select the current line and then move down 6 and delete them
 - dw || de			    : delete the current word
+- bd    			    : delete the previous word
 - 9k			        : jump 9 lines up
 - shift + g OR G	    : you will go to the bottom
 - Ex                    : open ups an explore window
 - Vex                   : opens up a vertical explore window
 - Sex                   : split explore just like the above
 - /                     : does the search. you can use 'n' to jump forward and 'N' to jump backward
+- vi + (                : selects everything that is inside the parenthesis
 -------------------------------------------------------------------------------------------------------
 - :set scrolloff=8	        	: when you are away 8 lines from the end of the page, it automatically scrolls
 - :set number			        : sets the line numbers into your vim
