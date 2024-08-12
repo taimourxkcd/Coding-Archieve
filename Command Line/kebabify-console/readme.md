@@ -262,6 +262,14 @@ Location.friendly.find('asdasdasd').hosted_data.url_small_logo.cropped_logo.meth
 Location.friendly.find('asdasdasd').hosted_data.url_small_logo.aws_bucket
 
 
+// create purchase from the console
+sp = StockPurchase.last
+new_sp = sp.dup
+
+new_sp.title = 
+new_sp.purchased_at = Time.now
+sip = StockPurchase.last.stock_item_purchases
+new_sp.save!
 
 ```
 
