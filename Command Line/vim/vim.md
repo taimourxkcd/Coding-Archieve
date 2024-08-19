@@ -9,6 +9,7 @@
 - $ 			        : takes you to the end of the line 
 - b 			        : jump back a word
 - 0  			        : takes you to the start of the line 
+- _                     : takes you to the start of the first word in the line
 - gg                    : takes you to the start of the file
 - 500G                  : takes you to line number 500 
 - G                     : takes you to the end of the file
@@ -17,6 +18,7 @@
 - cc                    : does the same thing as ce but for the whole line 
 - c$                    : deletes the rest of the line after the cursor and puts you in insert mode
 - x 			        : delete one character in the front
+- X 			        : delete one character behind the cursor  
 - zz 			        : center the text
 - dd  			        : delete the line
 - d2d  			        : delete the 2 lines below 
@@ -40,6 +42,8 @@
 - d6j			        : i want to delete the 6 down lines
 - shift + v + 6j	    : select the current line and then move down 6 and delete them
 - dw || de			    : delete the current word
+- yiw                   : copy the current word and move the cursor to the start
+- viwp                  : replace the current word under the cursor with the one that is copied
 - caw   			    : delete the current word the cursor is on right now and puts you in the insert mode 
 - bd    			    : delete the previous word
 - 9k			        : jump 9 lines up
