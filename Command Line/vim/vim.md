@@ -42,6 +42,7 @@
 - d6j			        : i want to delete the 6 down lines
 - shift + v + 6j	    : select the current line and then move down 6 and delete them
 - dw || de			    : delete the current word
+- ge                    : jump to the previous word
 - yiw                   : copy the current word and move the cursor to the start
 - viwp                  : replace the current word under the cursor with the one that is copied
 - caw   			    : delete the current word the cursor is on right now and puts you in the insert mode 
@@ -53,6 +54,9 @@
 - Sex                   : split explore just like the above
 - /                     : does the search. you can use 'n' to jump forward and 'N' to jump backward
 - vi + (                : selects everything that is inside the parenthesis
+--------------------------------VISUAL MODE-----------------------------------------------------------
+- '>' or '2>'           : use this to indent the selected text and move 1 tab forward or you can specify the tabs
+- '<' or '2<'           : use this to indent the selected text and move 1 tab backward or you can specify the tabs
 -------------------------------------------------------------------------------------------------------
 - :set scrolloff=8	        	: when you are away 8 lines from the end of the page, it automatically scrolls
 - :set number			        : sets the line numbers into your vim
