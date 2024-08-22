@@ -164,6 +164,12 @@ cat ~/.ssh/your_second_private_key.pub
 ---------------------
 git submodule update --init   : get submodule updates
 
+---------------------
+// rebase master correctly
+git fetch --all
+git reset --hard origin/master
+git pull
+
 
 
 
