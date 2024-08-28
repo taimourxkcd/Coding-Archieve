@@ -18,6 +18,30 @@
 - git branch -r | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
 ```
 
+```
+// create a new identity with another name
+https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3
+
+- cd ~/.ssh
+- ssh-keygen -t rsa -C "umer.husnain@arkhitech.com" -f "umer-husnain" => here f means filename
+- ssh-add -K ~/.ssh/umer-husnain
+- pbcopy < ~/.ssh/umer-husnain.pub => copy the public key
+- open config
+	- paste below
+        - Host github.com
+		  AddKeysToAgent yes
+		  UseKeychain yes
+		  IdentityFile ~/.ssh/umer-husnain
+- git clone git@github.com-{your-username}:{owner-user-name}/{the-repo-name}.git
+- set email and username
+	-  git config user.email "umer.husnain@arkhitech.com"
+	-  git config user.name "umer-husnain"
+- then test by push pull etc
+
+
+```
+
+
 
 ```
 Add a file into your repositery 
