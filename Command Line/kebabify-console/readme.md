@@ -272,5 +272,16 @@ new_sp.supplier = StockPurchase.last.supplier
 new_sp.stock_item_purchases = sip
 new_sp.save!
 
+
+
+// manay to many polymorphic
+menus = Location.find_by(slug: "at-cafe").menus
+menu_items = Location.find_by(slug: "at-cafe").menu_items
+offer = Offer.last
+offer.menus = menus
+offer.menu_items = menu_items
+
+
+
 ```
 
