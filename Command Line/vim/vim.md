@@ -17,6 +17,8 @@
 - ce                    : move the cursor on the character, it will remove all the character in front of it and activates insert mode 
 - cc                    : does the same thing as ce but for the whole line 
 - c$                    : deletes the rest of the line after the cursor and puts you in insert mode
+- d$                    : deletes the rest of the line after the cursor and it does not puts you in insert mode
+- d#                    : delete the current word prvious to the current cursor
 - x 			        : delete one character in the front
 - X 			        : delete one character behind the cursor  
 - zz 			        : center the text
@@ -54,6 +56,7 @@
 - Sex                   : split explore just like the above
 - /                     : does the search. you can use 'n' to jump forward and 'N' to jump backward
 - vi + (                : selects everything that is inside the parenthesis
+- +y                    : copies to the systems clipboard
 --------------------------------VISUAL MODE-----------------------------------------------------------
 - '>' or '2>'           : use this to indent the selected text and move 1 tab forward or you can specify the tabs
 - '<' or '2<'           : use this to indent the selected text and move 1 tab backward or you can specify the tabs
