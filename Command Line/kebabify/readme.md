@@ -86,4 +86,8 @@ ngrok http 3000
 scp arkhitech@foodnerdpos.com:/usr/share/nginx/foodnerd/current/app/models/stock_item.rb /Users/arkhitech/Desktop/kebabify/
 
 
+//directly changes to staging views. can also be done with models and controllers
+ rsync -avz app/views/ staging.foodnerd.pk:/usr/share/nginx/foodnerd_staging/current/app/views/
+
+
 ```
