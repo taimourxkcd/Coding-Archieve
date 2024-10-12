@@ -56,6 +56,7 @@
 - Sex                   : split explore just like the above
 - /                     : does the search. you can use 'n' to jump forward and 'N' to jump backward
 - vi + (                : selects everything that is inside the parenthesis
+- ggVG + "+y            : copies the content of the file into system clipboard
 - +y                    : copies to the systems clipboard
 --------------------------------VISUAL MODE-----------------------------------------------------------
 - '>' or '2>'           : use this to indent the selected text and move 1 tab forward or you can specify the tabs
