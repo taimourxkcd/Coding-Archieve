@@ -58,6 +58,7 @@
 - vi + (                : selects everything that is inside the parenthesis
 - ggVG + "+y            : copies the content of the file into system clipboard
 - +y                    : copies to the systems clipboard
+- ^                     : takes you to the start of the line in the beginning of the first word
 --------------------------------VISUAL MODE-----------------------------------------------------------
 - '>' or '2>'           : use this to indent the selected text and move 1 tab forward or you can specify the tabs
 - '<' or '2<'           : use this to indent the selected text and move 1 tab backward or you can specify the tabs
