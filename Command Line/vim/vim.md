@@ -59,6 +59,10 @@
 - ggVG + "+y            : copies the content of the file into system clipboard
 - +y                    : copies to the systems clipboard
 - ^                     : takes you to the start of the line in the beginning of the first word
+- r			: replaces the current character with the one you type 
+- I 			: insert mode to the beginning of the line. more precisely in the start of the first word in the line
+- D			: deletes everything to the end of the line. after the cursor
+- J 			: this joins the lines. the current line with the line below 
 --------------------------------VISUAL MODE-----------------------------------------------------------
 - '>' or '2>'           : use this to indent the selected text and move 1 tab forward or you can specify the tabs
 - '<' or '2<'           : use this to indent the selected text and move 1 tab backward or you can specify the tabs
