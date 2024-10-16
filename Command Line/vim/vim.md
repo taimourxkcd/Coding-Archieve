@@ -1,14 +1,14 @@
-- j 			        : down
-- k 			        : up
-- l 			        : right
-- h 			        : left
-- w 			        : jump a word
+- j 			              : down
+- k 			              : up
+- l 			              : right
+- h 			              : left
+- w 			              : jump a word
 - u                     : undo a command
 - ctrl + r              : redo a command
 - U                     : undo all the changes done on the current line 
-- $ 			        : takes you to the end of the line 
-- b 			        : jump back a word
-- 0  			        : takes you to the start of the line 
+- $ 			              : takes you to the end of the line 
+- b 			              : jump back a word
+- 0  			              : takes you to the start of the line 
 - _                     : takes you to the start of the first word in the line
 - gg                    : takes you to the start of the file
 - 500G                  : takes you to line number 500 
@@ -19,38 +19,38 @@
 - c$                    : deletes the rest of the line after the cursor and puts you in insert mode
 - d$                    : deletes the rest of the line after the cursor and it does not puts you in insert mode
 - d#                    : delete the current word prvious to the current cursor
-- x 			        : delete one character in the front
-- X 			        : delete one character behind the cursor  
-- zz 			        : center the text
-- dd  			        : delete the line
-- d2d  			        : delete the 2 lines below 
-- shift + v + d 	    : delete the line
-- yyp           	    : copy one line and paste below
+- x 			              : delete one character in the front
+- X 			              : delete one character behind the cursor  
+- zz 			              : center the text
+- dd  			            : delete the line
+- d2d  			            : delete the 2 lines below 
+- shift + v + d 	      : delete the line
+- yyp           	      : copy one line and paste below
 - p or P                : lower case p inserts the line below the current line. Upper case pastes it above the current line
-- yyP           	    : copy one line and paste above 
-- v       		        : begin highlighting
-- V         		    : hightlights the whole line
-- reg			        : keep track of the things you delete and the things that you yank
-- i 		        	: opens the cursor to the left of current character, i means on the inside
-- a      	        	: opens the cursor to the right of current character, a means on the outside
+- yyP           	      : copy one line and paste above 
+- v       		          : begin highlighting
+- V         		        : hightlights the whole line
+- reg			              : keep track of the things you delete and the things that you yank
+- i 		        	      : opens the cursor to the left of current character, i means on the inside
+- a      	        	    : opens the cursor to the right of current character, a means on the outside
 - %                     : brings you to the end of the closing braces
 - c%                    : gets rid of the things that are inside the parenthesis
-- I 			        : goes to the first non-whitespace character in the line
-- A 			        : goes to the end of the line always including the trailing whitespace
+- I 			              : goes to the first non-whitespace character in the line
+- A 			              : goes to the end of the line always including the trailing whitespace
 - ea                    : moves you to the end of the current work and puts you in insert mode 
-- o 			        : goes to the next line and turns insert mode on. also respects the language indentation
-- O			            : creates a new line above, works same as o
-- 4dd			        : delete the next 4 lines
-- d6j			        : i want to delete the 6 down lines
-- shift + v + 6j	    : select the current line and then move down 6 and delete them
-- dw || de			    : delete the current word
+- o 			              : goes to the next line and turns insert mode on. also respects the language indentation
+- O			                : creates a new line above, works same as o
+- 4dd			              : delete the next 4 lines
+- d6j			              : i want to delete the 6 down lines
+- shift + v + 6j	      : select the current line and then move down 6 and delete them
+- dw || de			        : delete the current word
 - ge                    : jump to the previous word
 - yiw                   : copy the current word and move the cursor to the start
 - viwp                  : replace the current word under the cursor with the one that is copied
-- caw   			    : delete the current word the cursor is on right now and puts you in the insert mode 
-- bd    			    : delete the previous word
-- 9k			        : jump 9 lines up
-- shift + g OR G	    : you will go to the bottom
+- caw   			          : delete the current word the cursor is on right now and puts you in the insert mode 
+- bd    			          : delete the previous word
+- 9k			              : jump 9 lines up
+- shift + g OR G	      : you will go to the bottom
 - Ex                    : open ups an explore window
 - Vex                   : opens up a vertical explore window
 - Sex                   : split explore just like the above
@@ -59,10 +59,11 @@
 - ggVG + "+y            : copies the content of the file into system clipboard
 - +y                    : copies to the systems clipboard
 - ^                     : takes you to the start of the line in the beginning of the first word
-- r			: replaces the current character with the one you type 
-- I 			: insert mode to the beginning of the line. more precisely in the start of the first word in the line
-- D			: deletes everything to the end of the line. after the cursor
-- J 			: this joins the lines. the current line with the line below 
+- r			                : replaces the current character with the one you type 
+- I 			              : insert mode to the beginning of the line. more precisely in the start of the first word in the line
+- D			                : deletes everything to the end of the line. after the cursor
+- J 			              : this joins the lines. the current line with the line below
+- f + {char}            : takes you to the next char 
 --------------------------------VISUAL MODE-----------------------------------------------------------
 - '>' or '2>'           : use this to indent the selected text and move 1 tab forward or you can specify the tabs
 - '<' or '2<'           : use this to indent the selected text and move 1 tab backward or you can specify the tabs
