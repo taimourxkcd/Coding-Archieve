@@ -283,5 +283,12 @@ offer.menu_items = menu_items
 
 
 
+// delete all the junk payment methods locally
+PaymentMethod.where(type: "PaymentMethod::GiftCard").destroy_all
+PaymentMethod.where(type: "PaymentMethod::Cash").where.not(id: 1847).destroy_all
+PaymentMethod.where(type: "PaymentMethod::DnaPayment").destroy_all
+
+
+
 ```
 
