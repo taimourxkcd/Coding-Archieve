@@ -289,6 +289,20 @@ PaymentMethod.where(type: "PaymentMethod::Cash").where.not(id: 1847).destroy_all
 PaymentMethod.where(type: "PaymentMethod::DnaPayment").destroy_all
 
 
+// update qr_code
+location = Location.find_by(slug: 'lazeez-point-1')
+qr_code_record = QrCode.find_or_initialize_by(location_id: location.id)
+url = "https://www.foodnerd.pk/locations/lazeez-point-1"
+qrcode = RQRCode::QRCode.new(url)
+svg = qrcode.as_svg(
+  offset: 0,
+  color: '000',
+  shape_rendering: 'crispEdges',
+  module_size: 6,
+  standalone: true
+)
+qr_code_record.json_attributes["qr_code"] = svg
+qr_code_record.save!
 
 ```
 
