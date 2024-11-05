@@ -3,10 +3,10 @@
   user.password = "123456"
   user.save! validate: false
 
-// open console in staging
+# open console in staging
 RAILS_ENV=staging bundle exec rails c
 
-// when the invoices is_paid boolean is not working
+# when the invoices is_paid boolean is not working
 
 
 Location.find_by_slug("pizzano-i-10-markaz")
@@ -15,7 +15,7 @@ Location.find_by_slug("pizzano-i-10-markaz").subscription.invoice
 Location.find_by_slug("pizzano-i-10-markaz").subscription.invoice.update(is_paid: true)
 
 
-// finding the user pin
+# finding the user pin
 User.last.pin
 
 
@@ -101,7 +101,7 @@ end
 
 
 @collection.second.menu_item_ingredient.stock_item.update(unit: "dozen")
-// update on staging
+# update on staging
 OrderItemIngredient.last.menu_item_ingredient.stock_item.update(unit: "kg")
 OrderItemIngredient.last.menu_item_ingredient.stock_item.update(purchased_quantity: "23", consumed_quantity: 10)
 
@@ -109,7 +109,7 @@ OrderItemIngredient.last.menu_item_ingredient.stock_item.update(purchased_quanti
  l.order_item_ingredients.first.menu_item_ingredient.stock_item.update(purchased_quantity: "50", consumed_quantity: 25)
  l.order_item_ingredients.first.menu_item_ingredient.stock_item.update(unit: "dozen")
 
-// update top selling items
+# update top selling items
 find order o = total_orders[3].id
 find orderItem for that order  oi = OrderItem.where(order_id: 1166772)
 update with the item you want to sell the most ) oi.update(item_id: 92417)
@@ -118,7 +118,7 @@ update with the item you want to sell the most ) oi.update(item_id: 92417)
 User.where('email LIKE ?', 'fasih%.com').pluck(:email)
 
 
-// redis error
+# redis error
 config/application.yml
 REDIS_URL: redis://127.0.0.1/10
 SIDEKIQ_REDIS_URL: redis://127.0.0.1:6379/11
@@ -142,36 +142,36 @@ SIDEKIQ_REDIS_URL: redis://127.0.0.1:6379/11
 3.0.2 :124 >  locations_count > allowed_locations
  => false 
 
-// find the name of all of the packages
+# find the name of all of the packages
  Subscription.includes(:package).limit(30).distinct.pluck('packages.title')
 
-// create a new subscription
+# create a new subscription
 user = User.find_by(email: "info@atcafe.com.pk")
 package = Package.find_by(title: "Starter")
 subscription = Subscription.create(user: user, package: package, amount: 15000, starts_at: Time.now, expires_at: Time.now + 1.year, obj_id: 3442, obj_type: "Location")
 
-// find out the subscriptions that a particular location has
+# find out the subscriptions that a particular location has
  Subscription.joins(:locations_subscriptions).where(locations_subscriptions: { location_id: 3198 })
 
-// find the user that has subscriptions
+# find the user that has subscriptions
  User.joins(:subscriptions).where.not(subscriptions: { id: nil }) .where("email LIKE ?", "%fasih%").pluck(:email)
 
-// find order count of menu items starting from OrderItem tabel
+# find order count of menu items starting from OrderItem tabel
     OrderItem.where(component_option_value_id: component_option_value.id,item_id: id,item_type: 'MenuItem',deleted_at: nil).sum(&:number)
 
-// do ransack search
+# do ransack search
 Order.ransack.location_drawers_id_eq
 
-//
+#
  Menu.joins(ingredients: :ingredient_option_values).distinct.first.ingredients.first.ingredient_option_values.first.ingredient.stock_items.first
 
 
-// make payment from console
+# make payment from console
  User.last.orders.first.update(payment_status: "pay_confirmed")
  User.last.orders.first.update(state: "completed")
 
 
-// perform order search from console
+# perform order search from console
  current_user = User.find_by(email: "muhammad.hamid+11@arkhitech.com")
 location_ids = @location&.id || current_user.managed_locations.ids
  @order_items = OrderItem.joins(:order).where("#{Order.table_name}.location_id IN (?)", location_ids)
@@ -186,7 +186,7 @@ q['order_state_in'] = [Order::STATES_COMPLETED]
 results = Order.ransack(:q).result
 
 
-// update the start and end date
+# update the start and end date
 start_at = Date.new(2023,7,20)
 end_at = Date.new(2023,11,23)
  LocationsSubscription.find_by(id: 2949).subscription.update(starts_at: start_at, expires_at: end_at)
@@ -195,19 +195,19 @@ end_at = Date.new(2023,11,23)
 
  UserMailer.new_stock_location_created("TAIMOUR", "taimoor.afzal@arkhitech.com", "ADFDAS", "ADFDAS", Time.now ).deliver_now
 
-// reset primary key sequences
+# reset primary key sequences
 ActiveRecord::Base.connection.reset_pk_sequence!('packages')
 
-// change this to sparkpost when sending mail from local in development.rb
+# change this to sparkpost when sending mail from local in development.rb
 config.action_mailer.delivery_method       = :letter_opener
 to: config.action_mailer.delivery_method       = :sparkpost
 
-// after db restore. add a chain/company whatever
+# after db restore. add a chain/company whatever
  Location.where('name LIKE ?', "%Foodnerd%").pluck(:name)
  Location.where('name LIKE ?', "%Foodnerd%").third.chain.update(is_company: true)
 
 
-// add delete column from console
+# add delete column from console
 ActiveRecord::Base.connection.add_column :packages, :trial_duration, :integer
 ActiveRecord::Base.connection.add_column :packages, :trial_duration_unit, :string
 
@@ -215,7 +215,7 @@ ActiveRecord::Base.connection.remove_column :packages, :trial_duration
 ActiveRecord::Base.connection.remove_column :packages, :trial_duration_unit
 
 
-// cancancan
+# cancancan
  current_user.owner_associations.first.role.parent_id
 current_user.owner_associations.first
  _exception.subject.chain.locations
@@ -223,14 +223,14 @@ current_user.owner_associations.first
 current_ability.can? _exception.subject, :new
 
 
-// generate file export
+# generate file export
 location = Location.find_by(slug: "test-loc-07062")
 logger = Rails.logger
 file_export = location.file_exports.build
 file_export.generate_export(logger)
 file_export.save!
 
-// do a transaction with rollback
+# do a transaction with rollback
 ActiveRecord::Base.transaction do
   association = OwnerAssociation.where.not(role_id: ids).joins(:role).where(role: { name: 'Owner' })
     original_values << { id: association.id, original_role_id: association.role_id }
@@ -245,16 +245,15 @@ def rollback_changes(original_values)
 end
 
 
-// for debugging library
+# for debugging library
  begin;  CS.get("PK", "BA"); rescue => e; puts e.backtrace.join("\n"); end
 
-
-//
+#
 Subscription.where('created_at > ?', 4.weeks.ago).where(status: 'saved').map(&:save)
 
 
 
-// logo issue
+# logo issue
  Location.friendly.find('asdasdasd').hosted_data.url_small_logo.recreate_versions!(:cropped_logo)
 begin;Location.friendly.find('asdasdasd').hosted_data.url_small_logo.recreate_versions!('cropped_logo');rescue => e;puts e.backtrace.join("\n");end
 begin;Location.friendly.find('asdasdasd').hosted_data.url_small_logo.recreate_versions!(:cropped_logo);rescue => e;puts e.backtrace.join("\n");end
@@ -262,7 +261,7 @@ Location.friendly.find('asdasdasd').hosted_data.url_small_logo.cropped_logo.meth
 Location.friendly.find('asdasdasd').hosted_data.url_small_logo.aws_bucket
 
 
-// create purchase from the console
+# create purchase from the console
 sp = StockPurchase.last
 new_sp = sp.dup
 new_sp.title = "abcdef"
@@ -274,7 +273,7 @@ new_sp.save!
 
 
 
-// manay to many polymorphic
+# manay to many polymorphic
 menus = Location.find_by(slug: "at-cafe").menus
 menu_items = Location.find_by(slug: "at-cafe").menu_items
 offer = Offer.last
@@ -283,13 +282,13 @@ offer.menu_items = menu_items
 
 
 
-// delete all the junk payment methods locally
+# delete all the junk payment methods locally
 PaymentMethod.where(type: "PaymentMethod::GiftCard").destroy_all
 PaymentMethod.where(type: "PaymentMethod::Cash").where.not(id: 1847).destroy_all
 PaymentMethod.where(type: "PaymentMethod::DnaPayment").destroy_all
 
 
-// update qr_code
+# update qr_code
 location = Location.find_by(slug: 'lazeez-point-1')
 qr_code_record = QrCode.find_or_initialize_by(location_id: location.id)
 url = "https://www.foodnerd.pk/locations/lazeez-point-1"
@@ -303,6 +302,15 @@ svg = qrcode.as_svg(
 )
 qr_code_record.json_attributes["qr_code"] = svg
 qr_code_record.save!
+
+
+
+# create payment method and set it as default
+pm = PaymentMethod.new(type: "PaymentMethod::Cash", name: "Easypaisa", activated_at: Time.zone.now)
+pm.save!
+ppm = PlacesPaymentMethod.new(place_type: "Location", place_id: 4554, payment_method_id: 2245) # use  above payment method id here
+ppm.save!
+PlacesPaymentMethod.last.update_columns(is_default: true)
 
 ```
 
