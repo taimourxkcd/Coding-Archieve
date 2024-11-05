@@ -304,6 +304,13 @@ qr_code_record.json_attributes["qr_code"] = svg
 qr_code_record.save!
 
 
+# update and old payment method to default
+PaymentMethod.find(3).places_payment_methods.count
+PaymentMethod.find(3).places_payment_methods.where.not(id: 15756).count
+PaymentMethod.find(3).places_payment_methods.where.not(id: 15756).destroy_all # destroy all except 1
+PaymentMethod.find(10).places_payment_methods.first.update_columns(is_default: true)
+
+
 
 # create payment method and set it as default
 pm = PaymentMethod.new(type: "PaymentMethod::Cash", name: "Easypaisa", activated_at: Time.zone.now)
