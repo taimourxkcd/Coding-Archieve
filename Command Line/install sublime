@@ -1,8 +1,0 @@
-❯ ln -s /mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe sublime
-
-export PATH="$PATH:$HOME/bin"
-
-sublime text.txt
-
-sudo vim /etc/sudoers
-:/home/taimour/bin

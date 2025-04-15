@@ -1,5 +1,0 @@
-cd 'I:\Data Mega Data\Data\Programming\Coding\Command Line\'
-cd 'C:\Program Files\Git'
-
-Ubuntu
-cd /etc/postgresql/15/main/
