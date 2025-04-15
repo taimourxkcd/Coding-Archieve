@@ -29,6 +29,7 @@
 - `d$` : Delete from the cursor to the end of the line (without entering insert mode)
 - `d#` : Delete the word before the cursor
 
+
 ---
 
 ### Deletion
@@ -60,9 +61,11 @@
 ---
 
 ### Highlighting & Selecting
-- `v` : Start visual mode (highlight text)
-- `V` : Highlight the entire line
+- `v`      : Start visual mode (highlight text)
+- `V`      : Highlight the entire line
 - `vi + (` : Select everything inside parentheses
+- `e`      : selects all the text b/w the inverted commas "both single and double" and brackets as well of all kinds
+
 
 ---
 
